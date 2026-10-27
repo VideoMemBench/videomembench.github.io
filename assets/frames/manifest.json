@@ -1,0 +1,328 @@
+{
+  "description": "VideoMemBench project-page hero assets from real project video frames: five groups from local evaluation videos and one group from the project's exported frame cache for old video 46, mapped to published video 202.",
+  "path_base": "Local source paths are relative to the videobench-videommmu workspace root; asset paths are relative to this manifest. Scene-02 source_export_path and membership evidence paths refer to the remote project export, with no machine-specific absolute path. The published video path is a release-relative reference; its MP4 was not downloaded for this preparation.",
+  "verification": {
+    "local_evaluation_membership": "The five video IDs in scene-01 and scene-03 through scene-06 were checked against _local_eval_copy3_final/index.json and VideoMME-test-v1_hybrid (3) copy.jsonl. Scene-02 uses the project's own extracted-frame cache for old benchmark video 46, mapped to published video 202; see its membership evidence.",
+    "official_326_video_benchmark_membership": "Verified for scene-02 by old video 46 in the 326-video main pack, the internal old-46 to new-202 release mapping, and the project teaser manifest. Membership of the other five local video groups in the official 326-video release has not been separately verified."
+  },
+  "processing": {
+    "decoder": "OpenCV VideoCapture for the five locally extracted video groups; Pillow resizes the existing project-exported JPEG frames in scene-02.",
+    "timestamp_policy": "For scene-01 and scene-03 through scene-06, timestamp_seconds are requested video seek times. Scene-02 uses source_export_timestamp_seconds from original untrimmed video 46; these are not published video-202 timestamps.",
+    "image_processing": "Aspect-ratio-preserving resize and center crop to 480 by 270; WebP quality 78. No image generation or visual retouching.",
+    "webp_quality": 78,
+    "dimensions": [
+      480,
+      270
+    ]
+  },
+  "groups": [
+    {
+      "scene": "scene-01",
+      "description": "Pole vault competition",
+      "video_id": "8y2Hj7GDcwI",
+      "source_video": "vids/8y2Hj7GDcwI.mp4",
+      "reference_url": "https://www.youtube.com/watch?v=8y2Hj7GDcwI",
+      "frames": [
+        {
+          "file": "scene-01-frame-01.webp",
+          "timestamp_seconds": 5,
+          "bytes": 10328,
+          "sha256": "80afddedb73df31f8aba171e10784171b61fca1a90ce9f32110229f7a1a6780c"
+        },
+        {
+          "file": "scene-01-frame-02.webp",
+          "timestamp_seconds": 9,
+          "bytes": 11310,
+          "sha256": "0c1d89571b889e57346a65baab8eaa12da0c5f0c2db905000e57056890282795"
+        },
+        {
+          "file": "scene-01-frame-03.webp",
+          "timestamp_seconds": 9.75,
+          "bytes": 12776,
+          "sha256": "e4de60d0e8d1287f928a30d8c74fb64bcebcd4143ee88f672a62c6103fa88d96"
+        },
+        {
+          "file": "scene-01-frame-04.webp",
+          "timestamp_seconds": 10.5,
+          "bytes": 15088,
+          "sha256": "57a529ab47f3b0bdc93f39d9d178ce0b8949ff698af978b6099c12a847f24c2a"
+        },
+        {
+          "file": "scene-01-frame-05.webp",
+          "timestamp_seconds": 29.75,
+          "bytes": 21766,
+          "sha256": "1c93d763f25dd30bfee75ec44913208ce27efe88eb5b26b7a56d15ef19da7738"
+        },
+        {
+          "file": "scene-01-frame-06.webp",
+          "timestamp_seconds": 38,
+          "bytes": 19578,
+          "sha256": "3ce39676ef39e6f66a7a92a03915f41502bc914b2309b8433e284a2a15b5aa4e"
+        }
+      ]
+    },
+    {
+      "scene": "scene-02",
+      "description": "Zootopia 2 frames from the project's own video-46 export cache, mapped to published benchmark video-202.",
+      "source_type": "project_exported_frames",
+      "source_title": "Zootopia 2",
+      "old_video_id": "videomembench-46",
+      "new_video_id": "videomembench-202",
+      "video_id": "videomembench-202",
+      "published_video_path": "videos/videomembench-202.mp4",
+      "published_video_downloaded": false,
+      "source_note": "Input images are previously extracted frames retrieved from the remote project cache vmb_teaser/frames/. The published MP4 itself was not downloaded for this asset preparation. No equivalence to an external YouTube video ID is asserted.",
+      "timestamp_policy": "source_export_timestamp_seconds refers to the original untrimmed old-video-46 timeline. These values have not been converted to the trimmed published-video-202 timeline.",
+      "source_export_duration_label": "23:56",
+      "source_export_duration_seconds": 1435.8667,
+      "published_trimmed_duration_seconds": 1367.867,
+      "benchmark_membership": {
+        "status": "verified",
+        "evidence": [
+          {
+            "reference": "vmb_main_pack_20260924_0728.tar.gz / qa/annotations_603_choice_1709_open.jsonl",
+            "detail": "The 326-video evaluated benchmark contains old video ID videomembench-46; its dialogue identifies the same Zootopia 2 scenes."
+          },
+          {
+            "reference": "vmb_renumber_20261015/video_id_mapping_old_to_new_INTERNAL.json",
+            "detail": "Project release mapping identifies old video 46 as published video 202."
+          },
+          {
+            "reference": "vmb_teaser teaser_manifest, sample video_id 46",
+            "detail": "Project teaser export identifies old video 46, duration 23:56, and the original-timeline frame cache used here."
+          }
+        ]
+      },
+      "frames": [
+        {
+          "file": "videomembench-202-frame-01.webp",
+          "description": "Police briefing room",
+          "source_export_path": "vmb_teaser/frames/t1_104.jpg",
+          "source_export_timestamp_seconds": 104,
+          "bytes": 12394,
+          "sha256": "2a73f06427b0aa83a9140f8a2d201b93b15fcb0be7a72570e9bfe3ba5fd26692"
+        },
+        {
+          "file": "videomembench-202-frame-02.webp",
+          "description": "Chief Bogo at the briefing",
+          "source_export_path": "vmb_teaser/frames/t2_109.jpg",
+          "source_export_timestamp_seconds": 109,
+          "bytes": 10376,
+          "sha256": "45004148e3efcc23285463beb08694c77337d5be8e3fc1b903ab6c012e23ccfa"
+        },
+        {
+          "file": "videomembench-202-frame-03.webp",
+          "description": "Judy Hopps at the shipping containers",
+          "source_export_path": "vmb_teaser/frames/t3_155.jpg",
+          "source_export_timestamp_seconds": 155,
+          "bytes": 7698,
+          "sha256": "efcb49d868f77ac480935ff99af47361b01eb8e6c2dbd2cfda61389a00100d7e"
+        },
+        {
+          "file": "videomembench-202-frame-04.webp",
+          "description": "Final confrontation",
+          "source_export_path": "vmb_teaser/frames/t6_1322.jpg",
+          "source_export_timestamp_seconds": 1322,
+          "bytes": 7132,
+          "sha256": "83fb2ebcc2c1a57f28d7061f936b875959f303e5bdeb195dc24daf72280f8bda"
+        },
+        {
+          "file": "videomembench-202-frame-05.webp",
+          "description": "Police officers at the confrontation",
+          "source_export_path": "vmb_teaser/frames/t6_1355.jpg",
+          "source_export_timestamp_seconds": 1355,
+          "bytes": 11770,
+          "sha256": "e1a3880a386c32e4394fcf6b2964039abb82d1fdb622add5073ac6293f5c4bdf"
+        },
+        {
+          "file": "videomembench-202-frame-06.webp",
+          "description": "Hospital scene",
+          "source_export_path": "vmb_teaser/frames/t5_1390.jpg",
+          "source_export_timestamp_seconds": 1390,
+          "bytes": 10174,
+          "sha256": "cd1488922fb8080af6bda7f7dd770b8215d326eba486845c2982845f605f93f9"
+        }
+      ]
+    },
+    {
+      "scene": "scene-03",
+      "description": "Character animation",
+      "video_id": "3rTsETO3s9U",
+      "source_video": "vids/3rTsETO3s9U.mp4",
+      "reference_url": "https://www.youtube.com/watch?v=3rTsETO3s9U",
+      "frames": [
+        {
+          "file": "scene-03-frame-01.webp",
+          "timestamp_seconds": 2,
+          "bytes": 7334,
+          "sha256": "5d47c85c5cdc44c0e050e7f08e8e711bba647860ca2ed8f9b4ee2864c7fcbfc7"
+        },
+        {
+          "file": "scene-03-frame-02.webp",
+          "timestamp_seconds": 3,
+          "bytes": 7164,
+          "sha256": "4b2bac2b198f7bff2d72877f3d6644b2352f958b15d06d9856e44c7cbf3d86a9"
+        },
+        {
+          "file": "scene-03-frame-03.webp",
+          "timestamp_seconds": 18,
+          "bytes": 7428,
+          "sha256": "12a0409ce974259c120016030030461bec1cac9fc2c3dddc8e09de4713572d6e"
+        },
+        {
+          "file": "scene-03-frame-04.webp",
+          "timestamp_seconds": 19,
+          "bytes": 6194,
+          "sha256": "8254c97aca72a1da0fc2f4405aa39dddb50887014f1a1431482a3777d4a6a404"
+        },
+        {
+          "file": "scene-03-frame-05.webp",
+          "timestamp_seconds": 27,
+          "bytes": 3058,
+          "sha256": "3a1a14b363a2f9132382433b9a2429b4a0a3d75cdb39c87ba0d924de4ed4fb4e"
+        },
+        {
+          "file": "scene-03-frame-06.webp",
+          "timestamp_seconds": 31,
+          "bytes": 3230,
+          "sha256": "6c2617d02c4aeedd90feb3c95bcd1d4a4f00a6e325dd40e01a80e6fbd994a388"
+        }
+      ]
+    },
+    {
+      "scene": "scene-04",
+      "description": "Ceramics and hand painting tutorial",
+      "video_id": "B6tQyCH5hQM",
+      "source_video": "vids/B6tQyCH5hQM.mp4",
+      "reference_url": "https://www.youtube.com/watch?v=B6tQyCH5hQM",
+      "frames": [
+        {
+          "file": "scene-04-frame-01.webp",
+          "timestamp_seconds": 1455,
+          "bytes": 11186,
+          "sha256": "eb9b0e2c1d6ca0acf60644f588c3c878f4ad537ef72574c8bc38d58bf242c9e6"
+        },
+        {
+          "file": "scene-04-frame-02.webp",
+          "timestamp_seconds": 1600,
+          "bytes": 10998,
+          "sha256": "e153b2b87fafb8ad19fbf2686415580b06324f87241db1f32eb58499661c1304"
+        },
+        {
+          "file": "scene-04-frame-03.webp",
+          "timestamp_seconds": 1740,
+          "bytes": 8992,
+          "sha256": "763611872ad0d3a5559f6749536bd254378250d5c891c75555feca32d7502f6d"
+        },
+        {
+          "file": "scene-04-frame-04.webp",
+          "timestamp_seconds": 1770,
+          "bytes": 10724,
+          "sha256": "6609846a80ee7eb9e79a916c5a042f1476160f667860d02caf48c0408d86b438"
+        },
+        {
+          "file": "scene-04-frame-05.webp",
+          "timestamp_seconds": 1860,
+          "bytes": 13606,
+          "sha256": "94ee22a8b00f5598f850af3423e6706e8190c3ad76fded6411bddade92d01383"
+        },
+        {
+          "file": "scene-04-frame-06.webp",
+          "timestamp_seconds": 1920,
+          "bytes": 12076,
+          "sha256": "11b5983a2ac27b0d4a8b3731d10b5fb9028e24c3939a3c4b0b78470d8e3a46fc"
+        }
+      ]
+    },
+    {
+      "scene": "scene-05",
+      "description": "Television dialogue scene",
+      "video_id": "44G3dPME330",
+      "source_video": "vids/44G3dPME330.mp4",
+      "reference_url": "https://www.youtube.com/watch?v=44G3dPME330",
+      "frames": [
+        {
+          "file": "scene-05-frame-01.webp",
+          "timestamp_seconds": 0.5,
+          "bytes": 17364,
+          "sha256": "54766a4426decd82e1730441147c2159406d1c1fe0eb3f0c388c24982e19a978"
+        },
+        {
+          "file": "scene-05-frame-02.webp",
+          "timestamp_seconds": 13,
+          "bytes": 15252,
+          "sha256": "530442cb8c2ffe582eb9c1acfe43c42e77fc1a3d88e751748aad4e46284c7408"
+        },
+        {
+          "file": "scene-05-frame-03.webp",
+          "timestamp_seconds": 88,
+          "bytes": 9136,
+          "sha256": "76ff92c7c0e3e7204166272a7829c3bd2df3389bf553d4e259a200decae76a67"
+        },
+        {
+          "file": "scene-05-frame-04.webp",
+          "timestamp_seconds": 132,
+          "bytes": 8544,
+          "sha256": "7e152ca28297640623ea37121c2b8cb92c6667bce75adceb660f3849f89ff6dc"
+        },
+        {
+          "file": "scene-05-frame-05.webp",
+          "timestamp_seconds": 135,
+          "bytes": 6010,
+          "sha256": "9225d79bb17461f985d6d35425ca84bd96197976bcacf5554cff579f29b3a189"
+        },
+        {
+          "file": "scene-05-frame-06.webp",
+          "timestamp_seconds": 336.5,
+          "bytes": 13370,
+          "sha256": "b8d2aa953cf45f291f64e81446a4b7df870df7f17dd61b416a46b5b23ea1ac2c"
+        }
+      ]
+    },
+    {
+      "scene": "scene-06",
+      "description": "Live music performance",
+      "video_id": "8np5YKYx3sU",
+      "source_video": "vids/8np5YKYx3sU.mp4",
+      "reference_url": "https://www.youtube.com/watch?v=8np5YKYx3sU",
+      "frames": [
+        {
+          "file": "scene-06-frame-01.webp",
+          "timestamp_seconds": 7,
+          "bytes": 5282,
+          "sha256": "ef4628c9dd9fe46b274b6514c8b2da832ea26fb2098fc703a4e43524605bf9ce"
+        },
+        {
+          "file": "scene-06-frame-02.webp",
+          "timestamp_seconds": 25,
+          "bytes": 11628,
+          "sha256": "f09674a8829853bfa89d0b65d74254352abf440377ffadd5f01c4f77530bf3bc"
+        },
+        {
+          "file": "scene-06-frame-03.webp",
+          "timestamp_seconds": 35,
+          "bytes": 15338,
+          "sha256": "dee7db9b1a1323d1e8f12d180118e4caafc661509e2ef0e97120941db9acbe46"
+        },
+        {
+          "file": "scene-06-frame-04.webp",
+          "timestamp_seconds": 36,
+          "bytes": 9490,
+          "sha256": "083744faac363992c3d5604b2f78c4814904958da354b5e24bd20a4b13f03373"
+        },
+        {
+          "file": "scene-06-frame-05.webp",
+          "timestamp_seconds": 60.5,
+          "bytes": 10994,
+          "sha256": "ccd93ecd626d685f26b497ea44529a8941cf310d9ac1f8999abe6d95cdce4b63"
+        },
+        {
+          "file": "scene-06-frame-06.webp",
+          "timestamp_seconds": 78,
+          "bytes": 11474,
+          "sha256": "a33c778fdf14bbdb0210318391cb3bd10555f9f1ee28a85ded4aba6061ffe534"
+        }
+      ]
+    }
+  ]
+}

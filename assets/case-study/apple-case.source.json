@@ -1,0 +1,436 @@
+{
+  "video_id": "videomembench-289",
+  "video_name": "videomembench-289.mp4",
+  "video_path": "videos/videomembench-289.mp4",
+  "dialogue": [
+    {
+      "turn_id": "T1",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "What feature is the coding agent asked to add to the app?",
+      "options": null,
+      "answer": "A person view.",
+      "evidence": [
+        {
+          "t_start": "08:05",
+          "t_end": "08:30"
+        }
+      ],
+      "answer_text": "A person view."
+    },
+    {
+      "turn_id": "T2",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T1"
+        ],
+        "ref": [
+          "requested app feature"
+        ],
+        "dep_type": {
+          "T1": "answer"
+        }
+      },
+      "question": "What four actions does the agent plan in order to implement the feature identified in T1?",
+      "options": null,
+      "answer": "Create PersonView, preview a screenshot in light and dark appearances, explore the Person struct, and test on device.",
+      "evidence": [
+        {
+          "t_start": "08:20",
+          "t_end": "08:55"
+        }
+      ]
+    },
+    {
+      "turn_id": "T3",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "Which three external coding models are shown as selectable in Xcode, and which company provides each one?",
+      "options": null,
+      "answer": "Claude by Anthropic, Codex by OpenAI, and Gemini by Google.",
+      "evidence": [
+        {
+          "t_start": "13:24",
+          "t_end": "13:45"
+        }
+      ]
+    },
+    {
+      "turn_id": "T4",
+      "type": "multi_choice_question",
+      "dependency": null,
+      "question": "Which two access-level labels are listed for non-persistent folder access?",
+      "options": {
+        "A": "View only, or view and edit",
+        "B": "Open only, or open and modify",
+        "C": "Browse only, or browse and update",
+        "D": "Read only, or read, write, and delete",
+        "E": "Read only, or full access",
+        "F": "Read only, or read and execute",
+        "G": "Read only, or write only",
+        "H": "Read only, or read and write"
+      },
+      "answer": "H",
+      "evidence": [
+        {
+          "t_start": "16:00",
+          "t_end": "16:20"
+        }
+      ],
+      "answer_text": "Read only, or read and write"
+    },
+    {
+      "turn_id": "T5",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "What are the three stages of the app-localization workflow, in order?",
+      "options": null,
+      "answer": "1. Prepare; 2. Translate; 3. Verify.",
+      "evidence": [
+        {
+          "t_start": "20:50",
+          "t_end": "21:10"
+        }
+      ]
+    },
+    {
+      "turn_id": "T6",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T5"
+        ],
+        "ref": [
+          "second stage of the localization workflow"
+        ],
+        "dep_type": {
+          "T5": "answer"
+        }
+      },
+      "question": "Which three sources of context are supplied during the second stage of the workflow identified in T5?",
+      "options": null,
+      "answer": "Relevant code, the surrounding UI, and translation guidance.",
+      "evidence": [
+        {
+          "t_start": "21:30",
+          "t_end": "21:55"
+        }
+      ]
+    },
+    {
+      "turn_id": "T7",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "What is introduced when Extensibility is discussed?",
+      "options": null,
+      "answer": "Plugins.",
+      "evidence": [
+        {
+          "t_start": "22:40",
+          "t_end": "22:55"
+        }
+      ],
+      "answer_text": "Plugins."
+    },
+    {
+      "turn_id": "T8",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T7"
+        ],
+        "ref": [
+          "item introduced for Extensibility"
+        ],
+        "dep_type": {
+          "T7": "answer"
+        }
+      },
+      "question": "Which three components are shown within the item identified in T7?",
+      "options": null,
+      "answer": "Skills, Tools, and Agents.",
+      "evidence": [
+        {
+          "t_start": "23:15",
+          "t_end": "23:24"
+        }
+      ]
+    },
+    {
+      "turn_id": "T9",
+      "type": "multi_choice_question",
+      "dependency": {
+        "depends_on": [
+          "T7"
+        ],
+        "ref": [
+          "item introduced for Extensibility"
+        ],
+        "dep_type": {
+          "T7": "answer"
+        }
+      },
+      "question": "Which option is selected to add the item identified in T7 to Xcode?",
+      "options": {
+        "A": "Add from File.",
+        "B": "Add from URL.",
+        "C": "Add from Package.",
+        "D": "Add from Marketplace.",
+        "E": "Add from Git.",
+        "F": "Add from Repository.",
+        "G": "Add from Folder.",
+        "H": "Add from Catalog."
+      },
+      "answer": "B",
+      "evidence": [
+        {
+          "t_start": "23:24",
+          "t_end": "23:29"
+        }
+      ],
+      "answer_text": "Add from URL."
+    },
+    {
+      "turn_id": "T10",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T9"
+        ],
+        "ref": [
+          "URL-based add method"
+        ],
+        "dep_type": {
+          "T9": "answer"
+        }
+      },
+      "question": "What two URL formats are accepted for the add method identified in T9?",
+      "options": null,
+      "answer": "https://host/owner/repo or git@host:owner/repo.",
+      "evidence": [
+        {
+          "t_start": "23:27",
+          "t_end": "23:40"
+        }
+      ]
+    },
+    {
+      "turn_id": "T11",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "Which physical pin is photographed in the app's camera flow?",
+      "options": null,
+      "answer": "The Finder pin.",
+      "evidence": [
+        {
+          "t_start": "24:45",
+          "t_end": "25:05"
+        }
+      ]
+    },
+    {
+      "turn_id": "T12",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T11"
+        ],
+        "ref": [
+          "photographed physical pin"
+        ],
+        "dep_type": {
+          "T11": "answer"
+        }
+      },
+      "question": "After the pin identified in T11 is photographed, where and in what state does it appear in the collection?",
+      "options": null,
+      "answer": "It appears in the 2025 section of My Pins and is marked as collected with a green check.",
+      "evidence": [
+        {
+          "t_start": "25:05",
+          "t_end": "25:25"
+        }
+      ]
+    },
+    {
+      "turn_id": "T13",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "Which four building blocks are introduced for connecting an app's actions and data to system intelligence?",
+      "options": null,
+      "answer": "Entity schemas, intent schemas, entity annotations, and interaction donations.",
+      "evidence": [
+        {
+          "t_start": "31:05",
+          "t_end": "31:30"
+        }
+      ]
+    },
+    {
+      "turn_id": "T14",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "What four fields are shown for the Timer Entity created by the 12-minute pasta-timer request, and what values are displayed?",
+      "options": null,
+      "answer": "Identifier, Duration, Label, and State are shown; their displayed values are an unspecified identifier, 12 m, Pasta, and Running.",
+      "evidence": [
+        {
+          "t_start": "32:10",
+          "t_end": "32:35"
+        }
+      ]
+    },
+    {
+      "turn_id": "T15",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T14"
+        ],
+        "ref": [
+          "the four Timer Entity fields"
+        ],
+        "dep_type": {
+          "T14": "answer"
+        }
+      },
+      "question": "How are the fields identified in T14 represented in the code block?",
+      "options": null,
+      "answer": "Identifier is represented as let id: UUID; Duration as @Property var duration: Duration; Label as @Property var label: String; and State as @Property var state: TimerState.",
+      "evidence": [
+        {
+          "t_start": "32:35",
+          "t_end": "33:05"
+        }
+      ]
+    },
+    {
+      "turn_id": "T16",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T15"
+        ],
+        "ref": [
+          "TimerEntity code block"
+        ],
+        "dep_type": {
+          "T15": "episodic"
+        }
+      },
+      "question": "Which schema is added to the code block identified in T15?",
+      "options": null,
+      "answer": "The .clock.timer schema, through @AppEntity(schema: .clock.timer).",
+      "evidence": [
+        {
+          "t_start": "33:45",
+          "t_end": "34:15"
+        }
+      ]
+    },
+    {
+      "turn_id": "T17",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T14"
+        ],
+        "ref": [
+          "Timer Entity"
+        ],
+        "dep_type": {
+          "T14": "answer"
+        }
+      },
+      "question": "Which three parameters define for updating the entity identified in T14?",
+      "options": null,
+      "answer": "The timer entity, an optional duration, and an optional label.",
+      "evidence": [
+        {
+          "t_start": "35:35",
+          "t_end": "36:00"
+        }
+      ]
+    },
+    {
+      "turn_id": "T18",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "What technical pillars are shown for scientific computing with MLX on Apple silicon, in the order introduced?",
+      "options": null,
+      "answer": "Numerical computing, automatic differentiation, distributed computing, and machine learning and AI.",
+      "evidence": [
+        {
+          "t_start": "74:15",
+          "t_end": "74:50"
+        }
+      ]
+    },
+    {
+      "turn_id": "T19",
+      "type": "multi_choice_question",
+      "dependency": null,
+      "question": "Which three applications are shown under 'Powering Language Model apps'?",
+      "options": {
+        "A": "Ollama, LM Studio, and vLLM",
+        "B": "GPT4All, Jan, and Open WebUI",
+        "C": "AnythingLLM, Chatbox, and LibreChat",
+        "D": "LocalAI, llama.cpp, and KoboldCpp",
+        "E": "Ollama, LM Studio, and llama.cpp",
+        "F": "Ollama, Jan, and vLLM",
+        "G": "LM Studio, vLLM, and Open WebUI",
+        "H": "Ollama, LM Studio, and SGLang"
+      },
+      "answer": "A",
+      "evidence": [
+        {
+          "t_start": "77:05",
+          "t_end": "77:30"
+        }
+      ],
+      "answer_text": "Ollama, LM Studio, and vLLM"
+    },
+    {
+      "turn_id": "T20",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "What parameter scale is claimed for local execution on Macs?",
+      "options": null,
+      "answer": "One trillion parameters.",
+      "evidence": [
+        {
+          "t_start": "80:55",
+          "t_end": "81:08"
+        }
+      ]
+    },
+    {
+      "turn_id": "T21",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T18",
+          "T20"
+        ],
+        "ref": [
+          "the third technical pillar",
+          "local parameter-scale target"
+        ],
+        "dep_type": {
+          "T18": "answer",
+          "T20": "answer"
+        }
+      },
+      "question": "How is the third pillar identified in T18 implemented to achieve the local parameter scale stated in T20?",
+      "options": null,
+      "answer": "Thunderbolt 5 and RDMA connect four Macs in a fully linked mesh.",
+      "evidence": [
+        {
+          "t_start": "80:25",
+          "t_end": "81:20"
+        }
+      ]
+    }
+  ]
+}

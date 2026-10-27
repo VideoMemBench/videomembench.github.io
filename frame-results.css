@@ -1,0 +1,102 @@
+/* Frame-count ablation uses the same tables and model typography as Results. */
+#frame-results {
+  margin-top: 76px;
+  padding-top: 52px;
+  border-top: 1px solid var(--content-line, #e2dfe8);
+}
+
+#frame-results .frame-heading {
+  margin-bottom: 26px;
+}
+
+#frame-results .frame-heading h3 {
+  margin: 0;
+  font-family: var(--content-heading-font, Georgia, "Times New Roman", serif);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: normal;
+}
+
+#frame-results .frame-description {
+  margin: 12px 0 0;
+  color: var(--content-muted, #6a6571);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+#frame-results .frame-tabs {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dcdde0;
+}
+
+#frame-results [hidden] {
+  display: none !important;
+}
+
+#frame-results .frame-tabs button {
+  margin-bottom: -1px;
+  padding: 10px 0 13px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  color: #666;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+#frame-results .frame-tabs button:hover,
+#frame-results .frame-tabs button[aria-selected="true"] {
+  color: #222;
+}
+
+#frame-results .frame-tabs button[aria-selected="true"] {
+  border-bottom-color: #29272e;
+  font-weight: 600;
+}
+
+#frame-results .frame-tabs button:focus-visible {
+  outline: 2px solid #6c6f76;
+  outline-offset: 3px;
+}
+
+#frame-results .frame-panel-title {
+  margin: 30px 0 16px;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+#frame-results[data-enhanced] .frame-panel-title {
+  display: none;
+}
+
+#frame-results .frame-note {
+  margin: 18px 0 0;
+  color: var(--content-muted, #6a6571);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 600px) {
+  #frame-results {
+    margin-top: 48px;
+    padding-top: 36px;
+  }
+
+  #frame-results .frame-heading h3 {
+    font-size: 28px;
+  }
+
+  #frame-results .frame-description {
+    font-size: 15px;
+  }
+}

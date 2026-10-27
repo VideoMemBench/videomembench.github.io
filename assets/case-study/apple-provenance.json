@@ -1,0 +1,91 @@
+{
+  "source_type": "project_benchmark_video",
+  "published_video_id": "videomembench-289",
+  "published_video_path": "videos/videomembench-289.mp4",
+  "video_title": "Apple developer presentation",
+  "source_description": "Exported from the existing VideoMemBench project video after verifying the old-to-release ID mapping against the annotations. Excerpts preserve chronological source order and cover every displayed question evidence window.",
+  "source_duration_seconds": 5271.975,
+  "source_url": "https://www.youtube.com/watch?v=Wpwjqk1UGnQ",
+  "exported_at": "2026-10-20",
+  "file": "apple.mp4",
+  "poster": "apple-poster.webp",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "duration_seconds": 166.0,
+  "encoding": {
+    "codec": "H.264",
+    "pixel_format": "yuv420p",
+    "frame_rate": "30/1",
+    "audio": false,
+    "faststart": true,
+    "crf": 23,
+    "maxrate": "1100k",
+    "preset": "fast"
+  },
+  "playback_segments": [
+    {
+      "source_start": 482,
+      "source_end": 538,
+      "playback_start": 0,
+      "playback_end": 56
+    },
+    {
+      "source_start": 801,
+      "source_end": 828,
+      "playback_start": 56,
+      "playback_end": 83
+    },
+    {
+      "source_start": 957,
+      "source_end": 983,
+      "playback_start": 83,
+      "playback_end": 109
+    },
+    {
+      "source_start": 1247,
+      "source_end": 1273,
+      "playback_start": 109,
+      "playback_end": 135
+    },
+    {
+      "source_start": 1287,
+      "source_end": 1318,
+      "playback_start": 135,
+      "playback_end": 166
+    }
+  ],
+  "timeline": "Chronological excerpts joined once with cuts between intervals. No repeated or reordered footage. Question labels retain original source-video timestamps; playback timestamps use this mapping.",
+  "visual_verification_samples": [
+    {
+      "source_seconds": 490,
+      "playback_seconds": 8
+    },
+    {
+      "source_seconds": 520,
+      "playback_seconds": 38
+    },
+    {
+      "source_seconds": 813,
+      "playback_seconds": 68
+    },
+    {
+      "source_seconds": 971,
+      "playback_seconds": 97
+    },
+    {
+      "source_seconds": 1261,
+      "playback_seconds": 123
+    },
+    {
+      "source_seconds": 1305,
+      "playback_seconds": 153
+    }
+  ],
+  "poster_playback_seconds": 3,
+  "decode_check": "passed",
+  "transfer_sha256_verified": true,
+  "bytes": 8720387,
+  "sha256": "f5a2654c4f374553d3d1e12dba3acf729c2b1d329b3723236a37ae025d08bb9f"
+}

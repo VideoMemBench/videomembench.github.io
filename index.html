@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="VideoMemBench evaluates what multimodal models remember across video conversations, through episodic and answer dependencies."><meta name="theme-color" content="#7160eb"><meta property="og:title" content="VideoMemBench"><meta property="og:description" content="How Well Do MLLMs Remember in Video Conversations?"><title>VideoMemBench · Video Conversation Memory</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="hero.css?v=20261020-7"><link rel="stylesheet" href="content.css?v=20261020-7"><link rel="stylesheet" href="case-study.css?v=20261020-5"><script src="script.js" defer></script><script src="case-study.js?v=20261021-1" defer></script><link rel="stylesheet" href="memory-motion.css?v=20261020-1"><link rel="stylesheet" href="frame-results.css?v=20261020-1"><script src="memory-motion.js?v=20261020-2" defer></script><script src="frame-results.js?v=20261020-1" defer></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="wordmark" href="#">VideoMemBench</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#results">Results</a><a href="#evaluation">Evaluation</a><a href="#citation">Citation</a><a class="nav-code" href="https://github.com/Oliiveralien/VideoMemBench-Eval">GitHub ↗</a></nav></header>
+<main id="main"><section class="hero" aria-labelledby="project-title">
+      <div class="hero-stage" data-paused="true">
+        <div class="frame-wall" id="frame-wall" aria-hidden="true">
+          <div class="frame-track">
+            <div class="frame-strip">
+              <img src="assets/frames/scene-01-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-03.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+            <div class="frame-strip">
+              <img src="assets/frames/scene-01-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-03.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+          </div>
+          <div class="frame-track">
+            <div class="frame-strip">
+              <img src="assets/frames/scene-04-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-03.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+            <div class="frame-strip">
+              <img src="assets/frames/scene-04-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-03.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-01.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-02.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-03.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+          </div>
+          <div class="frame-track">
+            <div class="frame-strip">
+              <img src="assets/frames/videomembench-202-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-06.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+            <div class="frame-strip">
+              <img src="assets/frames/videomembench-202-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/videomembench-202-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-03-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-01-frame-06.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+          </div>
+          <div class="frame-track">
+            <div class="frame-strip">
+              <img src="assets/frames/scene-05-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-06.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+            <div class="frame-strip">
+              <img src="assets/frames/scene-05-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-05-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-06-frame-06.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-04.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-05.webp" width="480" height="270" alt="" decoding="async">
+              <img src="assets/frames/scene-04-frame-06.webp" width="480" height="270" alt="" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="hero-copy">
+          <h1 class="hero-title" id="project-title">VideoMemBench</h1>
+          <p class="hero-subtitle">How Well Do MLLMs Remember<br>in Video Conversations?</p>
+        </div>
+        <div class="hero-edge">
+          <a class="hero-explore" href="#overview">Explore the benchmark <span aria-hidden="true">↓</span></a>
+          <button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-controls="frame-wall" hidden>
+            <svg class="icon-pause" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>
+            <svg class="icon-play" width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><path d="m3 1 8 5-8 5z"/></svg>
+            <span>Pause background</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-details wrap">
+        <div class="authors"><span>Zhengdong Hu<sup>1,*</sup></span><span>Chao Wang<sup>1,*</sup></span><span>Kaituo Feng<sup>2</sup></span><span>Huanjin Yao<sup>3</sup></span><span>Mingfei Lu<sup>1</sup></span><span>Hehe Fan<sup>4</sup></span><span>Yi Yang<sup>4,†</sup></span></div><div class="affiliations"><span><sup>1</sup> University of Technology Sydney</span><span><sup>2</sup> The Chinese University of Hong Kong</span><span><sup>3</sup> The Hong Kong University of Science and Technology</span><span><sup>4</sup> Zhejiang University</span></div><p class="author-note">* Equal contribution &nbsp; · &nbsp; † Corresponding author</p>
+        <div class="resources">
+          <span class="button resource-pending" aria-label="Paper, coming soon">
+            <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M8 12h8M8 16h6"/></svg>
+            Paper <small>Soon</small>
+          </span>
+          <a class="button primary" href="https://github.com/Oliiveralien/VideoMemBench-Eval">
+            <img class="resource-icon resource-brand github-mark" src="assets/icons/github.svg" width="19" height="19" alt="">
+            Code
+          </a>
+          <span class="button resource-pending" aria-label="Dataset, coming soon">
+            <img class="resource-icon resource-brand" src="assets/icons/huggingface.svg" width="19" height="19" alt="">
+            Dataset <small>Soon</small>
+          </span>
+          <a class="button" href="#results">
+            <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10h4v10m2 0V4h4v16m2 0V14h4v6M3 20h18"/></svg>
+            Leaderboard
+          </a>
+        </div>
+      </div>
+    </section>
+<section class="wrap section" id="overview">
+  <div class="section-heading">
+    <p class="eyebrow">01 / THE BENCHMARK</p>
+    <h2>Beyond answering one question at a time.</h2>
+  </div>
+  <p class="intro">A useful video conversation is connected: later questions revisit what happened earlier, or build on an answer already given. <strong>VideoMemBench</strong> measures this ability to retrieve and reuse information across turns—<em>in-context video memory</em>.</p>
+  <div class="memory-stories">
+    <article class="memory-story episodic" aria-labelledby="episodic-title">
+      <div class="memory-copy">
+        <p class="memory-kicker">01 / EPISODIC DEPENDENCY</p>
+        <h3 id="episodic-title">Remember what you have seen.</h3>
+        <p class="memory-lead">A later question can return to a scene, object, or event discussed earlier in the conversation.</p>
+        <p class="memory-detail">The model must reconnect that reference with the right visual episode and retrieve the relevant details.</p>
+        <div class="memory-measure"><strong>EpiDepAcc</strong><span>Accuracy on turns that revisit an earlier visual episode.</span></div>
+      </div>
+      <div class="memory-visual">
+        <figure class="diagram-figure">
+          <img src="assets/episodic-memory.svg?v=20261020-8" width="640" height="400" alt="Episodic dependency: an earlier video scene is revisited by a later conversation turn." loading="lazy">
+          <figcaption>An earlier visual episode anchors a later question.</figcaption>
+        </figure>
+      </div>
+    </article>
+    <article class="memory-story answer" aria-labelledby="answer-title">
+      <div class="memory-copy">
+        <p class="memory-kicker">02 / ANSWER DEPENDENCY</p>
+        <h3 id="answer-title">Remember what you have said.</h3>
+        <p class="memory-lead">A later question can build on an answer the model has already given.</p>
+        <p class="memory-detail">That earlier answer becomes part of the reasoning. A correct response earns credit only when its full answer-dependency chain is also correct.</p>
+        <div class="memory-measure"><strong>AnsDepAcc</strong><span>Credit for a correct response and its answer ancestors.</span></div>
+      </div>
+      <div class="memory-visual">
+        <figure class="diagram-figure">
+          <img src="assets/answer-memory.svg?v=20261020-8" width="640" height="400" alt="Answer dependency: earlier model answers carry forward through a chain of later conversation turns." loading="lazy">
+          <figcaption>Earlier answers carry forward through the conversation.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+<section class="memory-case" id="case-study" aria-labelledby="case-title">
+  <header class="case-heading">
+    <div><h3 id="case-title">A video conversation, turn by turn.</h3><p class="case-description">Follow a conversation across sports and product launches. Each question can return to an earlier scene or build on an earlier answer.</p></div>
+    <button class="case-toggle" id="case-toggle" type="button" aria-pressed="false" disabled><span aria-hidden="true">▶</span><span>Loading case</span></button>
+  </header>
+  <div class="case-selector" role="group" aria-label="Choose a video conversation">
+    <button type="button" data-case-id="basketball" aria-pressed="true">Case 1</button>
+    <button type="button" data-case-id="football" aria-pressed="false">Case 2</button>
+    <button type="button" data-case-id="google" aria-pressed="false">Case 3</button>
+    <button type="button" data-case-id="apple" aria-pressed="false">Case 4</button>
+  </div>
+  <div class="case-layout">
+    <div class="case-media">
+      <div class="case-player"><span class="case-loading">Loading video…</span></div>
+      <div class="case-video-meta"><span class="case-video-label">UCF vs. Arizona</span><span id="case-time">00:00</span></div>
+      <p class="case-excerpt-label" id="case-excerpt-label" hidden>Selected excerpts · original video time</p>
+      <div class="case-turn-controls"><button class="case-previous" id="case-previous" type="button" aria-label="Previous question" disabled>←</button><div class="case-turn-nav" aria-label="Choose a conversation turn"></div><button class="case-next" id="case-next" type="button" aria-label="Next question" disabled>→</button></div>
+      <p class="case-instruction">The video plays once. Questions follow their evidence timestamps. Select a turn to pause and revisit, or pause to read.</p>
+      <p class="case-media-status" id="case-media-status" role="status" hidden><span id="case-status-text"></span> <button id="case-retry" type="button" hidden>Try again</button> <a id="case-source-fallback" target="_blank" rel="noopener" hidden>Watch the source video ↗</a></p>
+    </div>
+    <div class="case-conversation">
+      <div class="case-conversation-heading"><span>Questions &amp; answers</span><span id="case-position"></span></div>
+      <div class="case-question-scroll" id="case-questions" tabindex="0" role="region" aria-label="Case study questions and reference answers"><ol class="case-question-list"><li class="case-loading-questions">Loading questions…</li></ol></div>
+    </div>
+  </div>
+  <p class="case-source-note"></p>
+  <noscript><p class="case-source-note">Enable JavaScript to play the cases and follow their questions. <a href="assets/case-study/basketball-case.json">Read the basketball annotations</a>.</p></noscript>
+</section>
+</section>
+<section class="results-section" id="results"><div class="wrap section"><div class="section-heading"><p class="eyebrow">02 / MAIN RESULTS</p><h2>A substantial memory gap remains.</h2><p>25 models evaluated with 128 frames and their own conversation history.</p></div><div class="table-panel"><div class="table-tools">
+  <label class="search"><span class="sr-only">Search model names</span><input id="model-search" type="search" placeholder="Filter, e.g. GPT, Qwen"></label>
+  <div class="filters" role="group" aria-label="Filter models"><button data-filter="All" aria-pressed="true">All models</button><button data-filter="Closed-source" aria-pressed="false">Closed-source</button><button data-filter="Open-weight" aria-pressed="false">Open-weight</button></div>
+</div><div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable benchmark results"><table><caption class="sr-only">Main results from Table 2. Scores are percentages; higher is better.</caption><thead><tr><th scope="col" title="Rank by Overall score">Rank</th><th scope="col">Model</th><th scope="col"><button data-sort="TurnAcc">TurnAcc <span aria-hidden="true">↕</span></button><span class="metric-hint">All turns</span></th><th scope="col"><button data-sort="EpiDepAcc">EpiDepAcc <span aria-hidden="true">↕</span></button><span class="metric-hint">Episodic dependency</span></th><th scope="col"><button data-sort="AnsDepAcc">AnsDepAcc <span aria-hidden="true">↕</span></button><span class="metric-hint">Answer dependency</span></th><th scope="col" aria-sort="descending"><button data-sort="Overall">Overall <span aria-hidden="true">↓</span></button><span class="metric-hint">Mean score</span></th></tr></thead><tbody><tr data-group="Closed-source" data-name="claude opus 5"><td class="rank">1</td><th scope="row"><span class="model"><img src="assets/icons/claude-color.svg" width="20" height="20" alt="">Claude Opus 5</span><span class="group">Closed-source</span></th><td>52.3</td><td>49.1</td><td>35.7</td><td><span class="score" style="--score:45.7%">45.7</span></td></tr><tr data-group="Closed-source" data-name="gemini 3.8 flash"><td class="rank">2</td><th scope="row"><span class="model"><img src="assets/icons/gemini-color.svg" width="20" height="20" alt="">Gemini 3.8 Flash</span><span class="group">Closed-source</span></th><td>50.4</td><td>46.6</td><td>30.3</td><td><span class="score" style="--score:42.4%">42.4</span></td></tr><tr data-group="Open-weight" data-name="kimi k3"><td class="rank">3</td><th scope="row"><span class="model"><img src="assets/icons/kimi-color.svg" width="20" height="20" alt="">Kimi K3</span><span class="group">Open-weight</span></th><td>50.5</td><td>49.0</td><td>27.1</td><td><span class="score" style="--score:42.2%">42.2</span></td></tr><tr data-group="Closed-source" data-name="gpt-5.6-sol"><td class="rank">4</td><th scope="row"><span class="model"><img src="assets/icons/openai.svg" width="20" height="20" alt="">GPT-5.6-sol</span><span class="group">Closed-source</span></th><td>50.0</td><td>47.8</td><td>27.1</td><td><span class="score" style="--score:41.7%">41.7</span></td></tr><tr data-group="Closed-source" data-name="gemini 3.5 flash"><td class="rank">5</td><th scope="row"><span class="model"><img src="assets/icons/gemini-color.svg" width="20" height="20" alt="">Gemini 3.5 Flash</span><span class="group">Closed-source</span></th><td>49.6</td><td>45.5</td><td>29.7</td><td><span class="score" style="--score:41.6%">41.6</span></td></tr><tr data-group="Closed-source" data-name="gpt-5.5"><td class="rank">6</td><th scope="row"><span class="model"><img src="assets/icons/openai.svg" width="20" height="20" alt="">GPT-5.5</span><span class="group">Closed-source</span></th><td>48.0</td><td>46.5</td><td>27.0</td><td><span class="score" style="--score:40.5%">40.5</span></td></tr><tr data-group="Closed-source" data-name="claude sonnet 5"><td class="rank">7</td><th scope="row"><span class="model"><img src="assets/icons/claude-color.svg" width="20" height="20" alt="">Claude Sonnet 5</span><span class="group">Closed-source</span></th><td>47.8</td><td>45.3</td><td>27.3</td><td><span class="score" style="--score:40.2%">40.2</span></td></tr><tr data-group="Closed-source" data-name="gemini 3.1 pro preview"><td class="rank">8</td><th scope="row"><span class="model"><img src="assets/icons/gemini-color.svg" width="20" height="20" alt="">Gemini 3.1 Pro Preview</span><span class="group">Closed-source</span></th><td>45.7</td><td>44.8</td><td>27.0</td><td><span class="score" style="--score:39.1%">39.1</span></td></tr><tr data-group="Closed-source" data-name="gpt-5.4"><td class="rank">9</td><th scope="row"><span class="model"><img src="assets/icons/openai.svg" width="20" height="20" alt="">GPT-5.4</span><span class="group">Closed-source</span></th><td>44.4</td><td>42.6</td><td>21.9</td><td><span class="score" style="--score:36.3%">36.3</span></td></tr><tr data-group="Open-weight" data-name="qwen3-vl-235b-a22b"><td class="rank">10</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-235B-A22B</span><span class="group">Open-weight</span></th><td>43.1</td><td>41.6</td><td>18.6</td><td><span class="score" style="--score:34.4%">34.4</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-27b"><td class="rank">11</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-27B</span><span class="group">Open-weight</span></th><td>42.2</td><td>39.8</td><td>20.9</td><td><span class="score" style="--score:34.3%">34.3</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-397b-a17b"><td class="rank">12</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-397B-A17B</span><span class="group">Open-weight</span></th><td>42.3</td><td>40.1</td><td>20.3</td><td><span class="score" style="--score:34.2%">34.2</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-122b-a10b"><td class="rank">13</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-122B-A10B</span><span class="group">Open-weight</span></th><td>42.4</td><td>39.5</td><td>19.9</td><td><span class="score" style="--score:33.9%">33.9</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-35b-a3b"><td class="rank">14</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-35B-A3B</span><span class="group">Open-weight</span></th><td>38.2</td><td>36.3</td><td>18.0</td><td><span class="score" style="--score:30.8%">30.8</span></td></tr><tr data-group="Open-weight" data-name="qwen3-vl-32b"><td class="rank">15</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-32B</span><span class="group">Open-weight</span></th><td>39.3</td><td>35.9</td><td>17.2</td><td><span class="score" style="--score:30.8%">30.8</span></td></tr><tr data-group="Open-weight" data-name="qwen3-vl-30b-a3b"><td class="rank">16</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-30B-A3B</span><span class="group">Open-weight</span></th><td>36.4</td><td>35.1</td><td>15.8</td><td><span class="score" style="--score:29.1%">29.1</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-9b"><td class="rank">17</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-9B</span><span class="group">Open-weight</span></th><td>34.6</td><td>33.4</td><td>12.9</td><td><span class="score" style="--score:27.0%">27.0</span></td></tr><tr data-group="Open-weight" data-name="qwen3-vl-8b"><td class="rank">18</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-8B</span><span class="group">Open-weight</span></th><td>34.8</td><td>32.1</td><td>12.3</td><td><span class="score" style="--score:26.4%">26.4</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-4b"><td class="rank">19</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-4B</span><span class="group">Open-weight</span></th><td>33.8</td><td>32.6</td><td>12.5</td><td><span class="score" style="--score:26.3%">26.3</span></td></tr><tr data-group="Open-weight" data-name="qwen3-vl-4b"><td class="rank">20</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-4B</span><span class="group">Open-weight</span></th><td>32.4</td><td>29.4</td><td>12.9</td><td><span class="score" style="--score:24.9%">24.9</span></td></tr><tr data-group="Open-weight" data-name="qwen2.5-vl-32b"><td class="rank">21</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-32B</span><span class="group">Open-weight</span></th><td>31.7</td><td>32.6</td><td>9.6</td><td><span class="score" style="--score:24.6%">24.6</span></td></tr><tr data-group="Open-weight" data-name="qwen2.5-vl-7b"><td class="rank">22</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-7B</span><span class="group">Open-weight</span></th><td>26.2</td><td>24.9</td><td>8.4</td><td><span class="score" style="--score:19.8%">19.8</span></td></tr><tr data-group="Open-weight" data-name="keye-vl-1.5-8b"><td class="rank">23</td><th scope="row"><span class="model"><img src="assets/icons/keye.svg" width="20" height="20" alt="">Keye-VL-1.5-8B</span><span class="group">Open-weight</span></th><td>25.4</td><td>24.5</td><td>8.2</td><td><span class="score" style="--score:19.4%">19.4</span></td></tr><tr data-group="Open-weight" data-name="qwen2.5-vl-3b"><td class="rank">24</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-3B</span><span class="group">Open-weight</span></th><td>23.5</td><td>24.4</td><td>5.7</td><td><span class="score" style="--score:17.9%">17.9</span></td></tr><tr data-group="Open-weight" data-name="qwen3.5-0.8b"><td class="rank">25</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-0.8B</span><span class="group">Open-weight</span></th><td>21.6</td><td>21.3</td><td>5.7</td><td><span class="score" style="--score:16.2%">16.2</span></td></tr></tbody></table></div><p id="empty" hidden>No matching models.</p><div class="table-foot"><span id="result-count" role="status">25 models</span><span class="leaderboard-update-note">We will continue evaluating new models and updating this leaderboard.</span></div></div><p class="table-note">Main results from Table 2 of the manuscript. All model scores use 128 fixed frames and sequential self-rollout. Scores are percentages.</p>
+<section id="frame-results" class="frame-results" aria-labelledby="frame-results-title">
+  <header class="frame-heading"><h3 id="frame-results-title">Evaluation with fewer frames</h3><p class="frame-description">13 open-weight models evaluated with 64 or 32 fixed frames per video.</p></header>
+  <div class="frame-tabs" role="tablist" aria-label="Frame budget" hidden>
+    <button id="frame-tab-64" type="button" role="tab" data-frame-tab="64" aria-controls="frame-panel-64" aria-selected="true">64 frames</button>
+    <button id="frame-tab-32" type="button" role="tab" data-frame-tab="32" aria-controls="frame-panel-32" aria-selected="false" tabindex="-1">32 frames</button>
+  </div>
+  <div class="frame-panel" id="frame-panel-64" data-frame-budget="64">
+    <h4 class="frame-panel-title">64 frames</h4>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable 64-frame benchmark results">
+      <table><caption class="sr-only">Table 4: 64 fixed frames and sequential self-rollout. Scores are percentages; higher is better. Rank is by Overall score.</caption>
+        <thead><tr><th scope="col" title="Rank by Overall score">Rank</th><th scope="col">Model</th>
+          <th scope="col" data-frame-metric="TurnAcc"><span class="frame-metric-label">TurnAcc</span><span class="metric-hint">All turns</span></th>
+          <th scope="col" data-frame-metric="EpiDepAcc"><span class="frame-metric-label">EpiDepAcc</span><span class="metric-hint">Episodic dependency</span></th>
+          <th scope="col" data-frame-metric="AnsDepAcc"><span class="frame-metric-label">AnsDepAcc</span><span class="metric-hint">Answer dependency</span></th>
+          <th scope="col" data-frame-metric="Overall" aria-sort="descending"><span class="frame-metric-label">Overall</span><span class="metric-hint">Mean score</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="rank">1</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-235B-A22B</span></th><td>40.3</td><td>39.3</td><td>15.6</td><td><span class="score">31.7</span></td></tr>
+          <tr><td class="rank">2</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-122B-A10B</span></th><td>37.8</td><td>36.5</td><td>15.2</td><td><span class="score">29.8</span></td></tr>
+          <tr><td class="rank">3</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-27B</span></th><td>37.9</td><td>36.7</td><td>14.8</td><td><span class="score">29.8</span></td></tr>
+          <tr><td class="rank">4</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-32B</span></th><td>37.8</td><td>36.1</td><td>14.5</td><td><span class="score">29.5</span></td></tr>
+          <tr><td class="rank">5</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-35B-A3B</span></th><td>37.0</td><td>36.7</td><td>13.5</td><td><span class="score">29.1</span></td></tr>
+          <tr><td class="rank">6</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-30B-A3B</span></th><td>33.6</td><td>32.9</td><td>11.5</td><td><span class="score">26.0</span></td></tr>
+          <tr><td class="rank">7</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-8B</span></th><td>32.7</td><td>32.0</td><td>11.9</td><td><span class="score">25.5</span></td></tr>
+          <tr><td class="rank">8</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-9B</span></th><td>33.4</td><td>33.2</td><td>9.6</td><td><span class="score">25.4</span></td></tr>
+          <tr><td class="rank">9</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-4B</span></th><td>31.3</td><td>30.3</td><td>12.1</td><td><span class="score">24.5</span></td></tr>
+          <tr><td class="rank">10</td><th scope="row"><span class="model"><img src="assets/icons/keye.svg" width="20" height="20" alt="">Keye-VL-1.5-8B</span></th><td>24.5</td><td>24.9</td><td>6.3</td><td><span class="score">18.5</span></td></tr>
+          <tr><td class="rank">11</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-7B</span></th><td>24.1</td><td>22.7</td><td>6.4</td><td><span class="score">17.7</span></td></tr>
+          <tr><td class="rank">12</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-3B</span></th><td>22.5</td><td>22.5</td><td>5.1</td><td><span class="score">16.7</span></td></tr>
+          <tr><td class="rank">13</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-0.8B</span></th><td>21.0</td><td>21.1</td><td>4.7</td><td><span class="score">15.6</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="frame-panel" id="frame-panel-32" data-frame-budget="32">
+    <h4 class="frame-panel-title">32 frames</h4>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable 32-frame benchmark results">
+      <table><caption class="sr-only">Table 4: 32 fixed frames and sequential self-rollout. Scores are percentages; higher is better. Rank is by Overall score.</caption>
+        <thead><tr><th scope="col" title="Rank by Overall score">Rank</th><th scope="col">Model</th>
+          <th scope="col" data-frame-metric="TurnAcc"><span class="frame-metric-label">TurnAcc</span><span class="metric-hint">All turns</span></th>
+          <th scope="col" data-frame-metric="EpiDepAcc"><span class="frame-metric-label">EpiDepAcc</span><span class="metric-hint">Episodic dependency</span></th>
+          <th scope="col" data-frame-metric="AnsDepAcc"><span class="frame-metric-label">AnsDepAcc</span><span class="metric-hint">Answer dependency</span></th>
+          <th scope="col" data-frame-metric="Overall" aria-sort="descending"><span class="frame-metric-label">Overall</span><span class="metric-hint">Mean score</span></th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="rank">1</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-235B-A22B</span></th><td>36.3</td><td>37.8</td><td>14.5</td><td><span class="score">29.5</span></td></tr>
+          <tr><td class="rank">2</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-122B-A10B</span></th><td>35.0</td><td>35.2</td><td>10.7</td><td><span class="score">27.0</span></td></tr>
+          <tr><td class="rank">3</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-35B-A3B</span></th><td>34.5</td><td>34.1</td><td>12.3</td><td><span class="score">27.0</span></td></tr>
+          <tr><td class="rank">4</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-27B</span></th><td>34.9</td><td>34.2</td><td>11.7</td><td><span class="score">26.9</span></td></tr>
+          <tr><td class="rank">5</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-32B</span></th><td>34.1</td><td>32.6</td><td>13.1</td><td><span class="score">26.6</span></td></tr>
+          <tr><td class="rank">6</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-30B-A3B</span></th><td>32.1</td><td>32.5</td><td>8.0</td><td><span class="score">24.2</span></td></tr>
+          <tr><td class="rank">7</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-9B</span></th><td>29.8</td><td>30.4</td><td>8.6</td><td><span class="score">22.9</span></td></tr>
+          <tr><td class="rank">8</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-8B</span></th><td>29.4</td><td>29.4</td><td>9.2</td><td><span class="score">22.7</span></td></tr>
+          <tr><td class="rank">9</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3-VL-4B</span></th><td>29.0</td><td>29.0</td><td>8.8</td><td><span class="score">22.3</span></td></tr>
+          <tr><td class="rank">10</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-7B</span></th><td>23.2</td><td>23.7</td><td>4.9</td><td><span class="score">17.3</span></td></tr>
+          <tr><td class="rank">11</td><th scope="row"><span class="model"><img src="assets/icons/keye.svg" width="20" height="20" alt="">Keye-VL-1.5-8B</span></th><td>23.3</td><td>23.1</td><td>5.1</td><td><span class="score">17.2</span></td></tr>
+          <tr><td class="rank">12</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen2.5-VL-3B</span></th><td>22.6</td><td>23.4</td><td>4.7</td><td><span class="score">16.9</span></td></tr>
+          <tr><td class="rank">13</td><th scope="row"><span class="model"><img src="assets/icons/qwen-color.svg" width="20" height="20" alt="">Qwen3.5-0.8B</span></th><td>20.1</td><td>21.8</td><td>4.7</td><td><span class="score">15.5</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <p class="frame-note">Table 4 · Fixed frames and sequential self-rollout. Scores are percentages.</p>
+  <p class="sr-only" id="frame-results-status" role="status"></p>
+</section>
+</div></section>
+<section class="wrap section" id="evaluation">
+  <div class="section-heading">
+    <p class="eyebrow">03 / EVALUATION</p>
+    <h2>The same video. The model’s own history.</h2>
+    <p>Visual input stays fixed; the conversation unfolds one turn at a time.</p>
+  </div>
+  <div class="evaluation-definitions">
+    <details class="definition-item" id="evaluation-protocol">
+      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>Evaluation protocol</strong><span class="definition-subtitle">Fixed input, sequential conversation, answer grading</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
+      <div class="definition-content">
+        <img class="protocol-figure" src="assets/evaluation-flow.svg" width="1440" alt="Evaluation pipeline: fixed visual input, sequential self-rollout, answer grading, dependency-aware metrics" loading="lazy">
+        <ol class="protocol-steps">
+          <li><h3>Fix the visual input</h3><p>Uniformly sample 128 timestamped frames once per video. Reuse the same frames for every model and every turn.</p></li>
+          <li><h3>Roll out the dialogue</h3><p>Ask questions in order, retaining the model’s own full historical responses. Ground-truth answers are not inserted into history.</p></li>
+          <li><h3>Grade each response</h3><p>Extract option letters for multiple-choice questions. Grade open-ended answers with GPT-5.4 mini under the paper’s binary semantic criterion.</p></li>
+        </ol>
+      </div>
+    </details>
+    <details class="definition-item" id="definition-turnacc">
+      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>TurnAcc</strong><span class="definition-subtitle">Turn accuracy</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
+      <div class="definition-content">
+        <dl class="metric-definition"><div><dt>Evaluation subset</dt><dd>All conversation turns.</dd></div><div><dt>Credit rule</dt><dd>A turn receives credit when the current response is correct.</dd></div></dl>
+      </div>
+    </details>
+    <details class="definition-item" id="definition-epidepacc">
+      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>EpiDepAcc</strong><span class="definition-subtitle">Episodic dependency accuracy</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
+      <div class="definition-content">
+        <dl class="metric-definition"><div><dt>Evaluation subset</dt><dd>Turns with at least one Episodic parent.</dd></div><div><dt>Credit rule</dt><dd>The current response must be correct. Credit is independent of whether the parent responses were correct.</dd></div></dl>
+      </div>
+    </details>
+    <details class="definition-item" id="definition-ansdepacc">
+      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>AnsDepAcc</strong><span class="definition-subtitle">Answer dependency accuracy</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
+      <div class="definition-content">
+        <dl class="metric-definition"><div><dt>Evaluation subset</dt><dd>Turns with at least one Answer parent.</dd></div><div><dt>Credit rule</dt><dd>The current response and every recursive ancestor reached through <strong>Answer edges only</strong> must all be correct. Episodic edges are not followed when tracing these ancestors.</dd></div></dl>
+      </div>
+    </details>
+    <details class="definition-item" id="definition-overall">
+      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>Overall</strong><span class="definition-subtitle">Equal-weight mean of the three metrics</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
+      <div class="definition-content">
+        <p class="metric-formula">(TurnAcc + EpiDepAcc + AnsDepAcc) / 3</p>
+        <p>The three metrics contribute equally to the overall score. All scores are reported as percentages; higher is better.</p>
+      </div>
+    </details>
+  </div>
+  <div class="evaluation-link"><div><h3>Run the evaluation</h3><p>Frame preparation, self-rollout, answer grading, and dependency-aware scoring.</p></div><a class="button primary" href="https://github.com/Oliiveralien/VideoMemBench-Eval#evaluation">Evaluation guide ↗</a></div>
+</section>
+<section class="citation-section" id="citation"><div class="wrap section"><div class="section-heading"><p class="eyebrow">04 / CITATION</p><h2>Cite VideoMemBench</h2></div><div class="citation-box"><div class="code-heading"><span>BibTeX</span><button id="copy-citation">Copy citation</button></div><pre><code id="bibtex">@unpublished{videomembench,
+  title  = {VideoMemBench: How Well Do MLLMs Remember in Video Conversations?},
+  author = {Hu, Zhengdong and Wang, Chao and Feng, Kaituo and Yao, Huanjin
+            and Lu, Mingfei and Fan, Hehe and Yang, Yi},
+  note   = {Manuscript}
+}</code></pre></div></div></section></main><footer class="wrap">
+  <div class="footer-identity">
+    <a class="footer-brand" href="#">VideoMemBench</a>
+    <p>In-context memory for video conversations.</p>
+  </div>
+  <div class="footer-updates">
+    <p class="footer-label">Project &amp; updates</p>
+    <ul class="footer-links" aria-label="Project and social links">
+      <li><a href="https://github.com/Oliiveralien/VideoMemBench-Eval" target="_blank" rel="noopener"><img src="assets/icons/github.svg" width="18" height="18" alt="">GitHub <span aria-hidden="true">↗</span></a></li>
+      <li><span class="footer-pending" aria-label="X, coming soon"><span class="footer-platform"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.6 5.5 22H2.3l7.4-8.5L1 2h6.5l5.7 7.8L18.9 2ZM17.8 20h1.7L6.5 3.9H4.7L17.8 20Z" fill="currentColor"/></svg><span>X</span></span><small>Coming soon</small></span></li>
+      <li><span class="footer-pending" aria-label="小红书, coming soon"><span class="footer-platform" lang="zh-CN">小红书</span><small>Coming soon</small></span></li>
+    </ul>
+  </div>
+  <div class="footer-legal">
+    <span>VideoMemBench</span>
+    <span class="footer-license">
+      <span>Dataset annotations: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span>
+      <span>For non-commercial academic research and evaluation only. Not for model training.</span>
+      <span>Source videos are not covered by this license; their original rights and terms apply.</span>
+      <span><a href="https://huggingface.co/datasets/VideoMemBench/data" target="_blank" rel="noopener">Full dataset terms on Hugging Face ↗</a></span>
+    </span>
+  </div>
+</footer><script type="application/json" id="case-data">{"basketball":{"title":"UCF vs. Arizona: opening sequence","source_note":"The first eight turns of the VideoMemBench dialogue, shown as an excerpt. Questions, gold answers and dependency labels are copied from the dataset. Original evidence windows are retained.","turns":[{"id":"T1","question":"At the opening jump ball, which white-jersey UCF player is closest to the referee, and what is their hairstyle?","options":null,"answer":"UCF #2 with a top-knot","answer_text":"UCF #2 with a top-knot","evidence_windows":[{"start_seconds":0,"end_seconds":2}]},{"id":"T2","question":"Right after the jump ball, is the UCF player from T1 guarding the dark-jersey number 0 ball handler?","options":null,"answer":"Yes.","answer_text":"Yes.","evidence_windows":[{"start_seconds":11,"end_seconds":13}],"dependency":{"depends_on":["T1"],"dep_type":{"T1":"episodic"}}},{"id":"T3","question":"What foul count is shown beneath the score for the dark-jersey team from T2?","options":null,"answer":"0 fouls (no foul count is displayed beneath Arizona's score during the play right after the jump ball)","answer_text":"0 fouls (no foul count is displayed beneath Arizona's score during the play right after the jump ball)","evidence_windows":[{"start_seconds":11,"end_seconds":13}],"dependency":{"depends_on":["T2"],"dep_type":{"T2":"episodic"}}},{"id":"T4","question":"Do both the player from T1 and the player from T2 wear a wristband on the left arm?","options":{"A":"Yes, both players have a visible wristband on their left arm.","B":"No, neither player has a visible wristband on their left arm.","C":"Only the player with the top-knot has a visible wristband on his left arm.","D":"Only the player wearing number 0 has a visible wristband on his left arm."},"answer":"B","answer_text":"No, neither player has a visible wristband on their left arm.","evidence_windows":[{"start_seconds":11,"end_seconds":13}],"dependency":{"depends_on":["T1","T2"],"dep_type":{"T1":"episodic","T2":"episodic"}}},{"id":"T5","question":"At 00:38, how is the dark-jersey team from T4 set up defensively relative to the three-point arc and the ball handler?","options":null,"answer":"The Arizona team is playing a man-to-man defense, with all five defenders positioned inside or near the three-point arc, each closely tracking their respective offensive assignments.","answer_text":"The Arizona team is playing a man-to-man defense, with all five defenders positioned inside or near the three-point arc, each closely tracking their respective offensive assignments.","evidence_windows":[{"start_seconds":39,"end_seconds":43}],"dependency":{"depends_on":["T4"],"dep_type":{"T4":"episodic"}}},{"id":"T6","question":"At 01:11, what is the most likely emotional state of the coach in the grey suit?","options":{"A":"Frustration after a missed defensive stop","B":"Encouraging a player on the bench","C":"Celebrating a successful three-point shot","D":"Disbelief at a referee's call","E":"Calm satisfaction after a well-run play","F":"Anxiety about the shot clock","G":"Amusement at a teammate's mistake","H":"Urgency while calling a timeout"},"answer":"A","answer_text":"Frustration after a missed defensive stop","evidence_windows":[{"start_seconds":73,"end_seconds":79}]},{"id":"T7","question":"For the dark-jersey player established in T2 and T4, what overall win-loss record is shown for that player's team on the score bug at the cited timestamp?","options":null,"answer":"17-0","answer_text":"17-0","evidence_windows":[{"start_seconds":90,"end_seconds":92}],"dependency":{"depends_on":["T2","T4"],"dep_type":{"T2":"episodic","T4":"episodic"}}},{"id":"T8","question":"In the team-leaders scoreboard graphic, is the player from T1, T4, or T7 listed as a points leader?","options":null,"answer":"False","answer_text":"False","evidence_windows":[{"start_seconds":75,"end_seconds":90}],"dependency":{"depends_on":["T1","T4","T7"],"dep_type":{"T1":"episodic","T4":"episodic","T7":"episodic"}}}]},"football":{"title":"Birmingham City vs. Nottingham Forest","display_title":"Birmingham City vs. Nottingham Forest","source_url":"https://www.youtube.com/watch?v=hF4Pk6_s1uE","source_note":"The complete seven-turn VideoMemBench dialogue. Questions, gold answers and dependency labels are copied from the dataset. The video combines the corresponding evidence excerpts; displayed timestamps retain the original full-match timeline.","playback_segments":[{"source_start":0,"source_end":90,"playback_start":0},{"source_start":2938,"source_end":2982,"playback_start":90},{"source_start":6040,"source_end":6049,"playback_start":134}],"turns":[{"id":"T1","question":"At kickoff, what brand is on the ponytailed player's jersey?","options":null,"answer":"Nike","answer_text":"Nike","evidence_windows":[{"start_seconds":0,"end_seconds":1}]},{"id":"T2","question":"Is the player from T1 left or right of the center circle in the first attack?","options":null,"answer":"Left","answer_text":"Left","evidence_windows":[{"start_seconds":41,"end_seconds":49}],"dependency":{"depends_on":["T1"],"dep_type":{"T1":"episodic"}}},{"id":"T3","question":"How does the player from T1 move relative to the center circle after T2?","options":null,"answer":"Moves away from the center circle","answer_text":"Moves away from the center circle","evidence_windows":[{"start_seconds":41,"end_seconds":51}],"dependency":{"depends_on":["T1","T2"],"dep_type":{"T1":"episodic","T2":"answer"}}},{"id":"T4","question":"What does the ponytailed player wearing number 16 do near the penalty arc?","options":null,"answer":"Wipes the ball and throws it out.","answer_text":"Wipes the ball and throws it out.","evidence_windows":[{"start_seconds":77,"end_seconds":87}]},{"id":"T5","question":"Who scored Birmingham City's second goal?","options":null,"answer":"LEIDHAMMAR","answer_text":"LEIDHAMMAR","evidence_windows":[{"start_seconds":2960,"end_seconds":2980}]},{"id":"T6","question":"What color is the opposing goalkeeper's jersey when the player from T5 scores?","options":null,"answer":"Yellow","answer_text":"Yellow","evidence_windows":[{"start_seconds":2940,"end_seconds":2980}],"dependency":{"depends_on":["T5"],"dep_type":{"T5":"answer"}}},{"id":"T7","question":"Per the match summary graphic, who won?","options":null,"answer":"Birmingham City","answer_text":"Birmingham City","evidence_windows":[{"start_seconds":6042,"end_seconds":6049}]}]},"google":{"title":"Google keynote","display_title":"Google keynote","source_url":"https://www.youtube.com/watch?v=duHhImuaZGU","source_note":"The first 7 turns of a 14-turn VideoMemBench dialogue. Questions, gold answers and dependency labels are copied from the dataset. The video combines the corresponding evidence excerpts; displayed timestamps retain the original source timeline.","playback_segments":[{"source_start":648,"source_end":695,"playback_start":0},{"source_start":1004,"source_end":1057,"playback_start":47}],"turns":[{"id":"T1","question":"When the speaker introduces the TPU 8t, what is the stated multiplier for its raw computing power increase over the previous generation?","options":null,"answer":"3x","answer_text":"3x","evidence_windows":[{"start_seconds":650.0,"end_seconds":662.0}]},{"id":"T2","question":"What is the number of TPU chips shown in a single training cluster for the product introduced in T1?","options":{"A":"2M+","B":"3M+","C":"5M+","D":"500K+","E":"100K+","F":"10M+","G":"1.5M+","H":"1M+"},"answer":"H","answer_text":"1M+","evidence_windows":[{"start_seconds":680.0,"end_seconds":692.0}],"dependency":{"depends_on":["T1"],"dep_type":{"T1":"episodic"}}},{"id":"T3","question":"In the claymation protein-folding explainer, which four labeled stages appear in order?","options":null,"answer":"Amino Acids → Alpha Helix → Beta Sheet → Folded Protein.","answer_text":"Amino Acids → Alpha Helix → Beta Sheet → Folded Protein.","evidence_windows":[{"start_seconds":1007.0,"end_seconds":1017.0}]},{"id":"T4","question":"In the Gemini Omni mirror-editing prompt, what three visual changes are requested when the man touches the mirror?","options":null,"answer":"The mirror ripples like liquid around his finger, the room becomes dark, and numerous shape-shifting photorealistic 3D prisms appear throughout the room.","answer_text":"The mirror ripples like liquid around his finger, the room becomes dark, and numerous shape-shifting photorealistic 3D prisms appear throughout the room.","evidence_windows":[{"start_seconds":1036.0,"end_seconds":1039.0}]},{"id":"T5","question":"Does the generated video visibly implement all three requested changes identified in T4?","options":null,"answer":"Yes.","answer_text":"Yes.","evidence_windows":[{"start_seconds":1034.0,"end_seconds":1047.0}],"dependency":{"depends_on":["T4"],"dep_type":{"T4":"answer"}}},{"id":"T6","question":"After the demonstration in T5, how does the man’s appearance and surroundings change in sequence?","options":null,"answer":"The scene changes to one covered with foliage, then to an ornate period setting, a wireframe rendering, a stained-glass rendering, a sci-fi room overlooking a Mars-like landscape, and finally a futuristic light-filled interior.","answer_text":"The scene changes to one covered with foliage, then to an ornate period setting, a wireframe rendering, a stained-glass rendering, a sci-fi room overlooking a Mars-like landscape, and finally a futuristic light-filled interior.","evidence_windows":[{"start_seconds":1046.0,"end_seconds":1054.0}],"dependency":{"depends_on":["T5"],"dep_type":{"T5":"episodic"}}},{"id":"T7","question":"Among the transformations listed in T6, which two scenes show the man wearing the same clothing as in the demonstration in T5?","options":null,"answer":"The foliage-covered scene and the sci-fi room overlooking a Mars-like landscape.","answer_text":"The foliage-covered scene and the sci-fi room overlooking a Mars-like landscape.","evidence_windows":[{"start_seconds":1044.0,"end_seconds":1053.0}],"dependency":{"depends_on":["T5","T6"],"dep_type":{"T5":"episodic","T6":"answer"}}}]},"apple":{"title":"Apple developer presentation","display_title":"Apple developer presentation","source_url":"https://www.youtube.com/watch?v=Wpwjqk1UGnQ","source_note":"The first 6 turns of a 21-turn VideoMemBench dialogue. Questions, gold answers and dependency labels are copied from the dataset. The video combines the corresponding evidence excerpts; displayed timestamps retain the original source timeline.","playback_segments":[{"source_start":482,"source_end":538,"playback_start":0},{"source_start":801,"source_end":828,"playback_start":56},{"source_start":957,"source_end":983,"playback_start":83},{"source_start":1247,"source_end":1273,"playback_start":109},{"source_start":1287,"source_end":1318,"playback_start":135}],"turns":[{"id":"T1","question":"What feature is the coding agent asked to add to the app?","options":null,"answer":"A person view.","answer_text":"A person view.","evidence_windows":[{"start_seconds":485.0,"end_seconds":510.0}]},{"id":"T2","question":"What four actions does the agent plan in order to implement the feature identified in T1?","options":null,"answer":"Create PersonView, preview a screenshot in light and dark appearances, explore the Person struct, and test on device.","answer_text":"Create PersonView, preview a screenshot in light and dark appearances, explore the Person struct, and test on device.","evidence_windows":[{"start_seconds":500.0,"end_seconds":535.0}],"dependency":{"depends_on":["T1"],"dep_type":{"T1":"answer"}}},{"id":"T3","question":"Which three external coding models are shown as selectable in Xcode, and which company provides each one?","options":null,"answer":"Claude by Anthropic, Codex by OpenAI, and Gemini by Google.","answer_text":"Claude by Anthropic, Codex by OpenAI, and Gemini by Google.","evidence_windows":[{"start_seconds":804.0,"end_seconds":825.0}]},{"id":"T4","question":"Which two access-level labels are listed for non-persistent folder access?","options":{"A":"View only, or view and edit","B":"Open only, or open and modify","C":"Browse only, or browse and update","D":"Read only, or read, write, and delete","E":"Read only, or full access","F":"Read only, or read and execute","G":"Read only, or write only","H":"Read only, or read and write"},"answer":"H","answer_text":"Read only, or read and write","evidence_windows":[{"start_seconds":960.0,"end_seconds":980.0}]},{"id":"T5","question":"What are the three stages of the app-localization workflow, in order?","options":null,"answer":"1. Prepare; 2. Translate; 3. Verify.","answer_text":"1. Prepare; 2. Translate; 3. Verify.","evidence_windows":[{"start_seconds":1250.0,"end_seconds":1270.0}]},{"id":"T6","question":"Which three sources of context are supplied during the second stage of the workflow identified in T5?","options":null,"answer":"Relevant code, the surrounding UI, and translation guidance.","answer_text":"Relevant code, the surrounding UI, and translation guidance.","evidence_windows":[{"start_seconds":1290.0,"end_seconds":1315.0}],"dependency":{"depends_on":["T5"],"dep_type":{"T5":"answer"}}}]}}</script>
+</body></html>

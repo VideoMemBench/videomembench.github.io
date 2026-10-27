@@ -1,0 +1,39 @@
+{
+  "source_type": "project_benchmark_video",
+  "published_video_id": "videomembench-85",
+  "published_video_path": "videos/videomembench-85.mp4",
+  "source_description": "The existing project video was located through the project data-container connection; the internal old-to-release ID mapping was verified before export. Source video duration and opening frames match the original project captions and the eight-question basketball case.",
+  "source_duration_seconds": 4933.279,
+  "video_title": "#1 Arizona vs. UCF Full Game Replay (1.17.2026) | 2025-26 Big 12 Men's Basketball",
+  "visual_verification_timestamps_seconds": [
+    1,
+    12,
+    41,
+    76,
+    91
+  ],
+  "exported_at": "2026-10-20",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "file": "basketball.mp4",
+  "source_interval_seconds": [
+    0,
+    96
+  ],
+  "duration_seconds": 96.03,
+  "encoding": {
+    "codec": "H.264",
+    "pixel_format": "yuv420p",
+    "frame_rate": "30000/1001",
+    "audio": false,
+    "faststart": true,
+    "crf": 23,
+    "maxrate": "1100k",
+    "preset": "fast"
+  },
+  "timeline": "Original opening sequence preserved from source time zero; no reordering or evidence-window edits.",
+  "bytes": 13322662,
+  "sha256": "3d7e7d9cbfc48b330c196153e4beda5b642c3d904bce8c684489b2ba3a529979"
+}

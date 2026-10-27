@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="560" viewBox="0 0 1440 560" role="img" aria-labelledby="title desc">
+<title id="title">VideoMemBench</title><desc id="desc">In-context video memory. 128 fixed frames, ordered conversation, seen and said dependencies.</desc>
+<defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0C1226"/><stop offset="1" stop-color="#181435"/></linearGradient>
+<linearGradient id="accent"><stop stop-color="#A896FF"/><stop offset="1" stop-color="#5EEAD4"/></linearGradient>
+<pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#FFFFFF" stroke-opacity=".035"/></pattern>
+<marker id="arrowTeal" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#5EEAD4" stroke-width="1.5"/></marker>
+<marker id="arrowPurple" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="none" stroke="#B7A5FF" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1440" height="560" rx="24" fill="url(#bg)"/><rect width="1440" height="560" rx="24" fill="url(#grid)"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="62" y="48" width="240" height="30" rx="15" fill="#A896FF" fill-opacity=".12" stroke="#A896FF" stroke-opacity=".35"/>
+<text x="182" y="68" text-anchor="middle" fill="#D4C9FF" font-size="12" font-weight="700" letter-spacing="2">IN-CONTEXT VIDEO MEMORY</text>
+<text x="58" y="165" fill="#F7F7FC" font-size="73" font-weight="700" letter-spacing="-3">VideoMemBench<tspan fill="#5EEAD4">.</tspan></text>
+<text x="62" y="216" fill="#C8CEE1" font-size="24">How well do MLLMs remember</text>
+<text x="62" y="252" fill="#C8CEE1" font-size="24">in video conversations?</text>
+<rect x="62" y="295" width="490" height="2" fill="url(#accent)" opacity=".65"/>
+<text x="62" y="339" fill="#5EEAD4" font-size="20" font-weight="700">What the model has seen.</text>
+<text x="62" y="376" fill="#B7A5FF" font-size="20" font-weight="700">What the model has said.</text>
+<text x="62" y="476" fill="#909BB9" font-size="14" letter-spacing="1.5">128 FIXED FRAMES  /  SEQUENTIAL SELF-ROLLOUT</text>
+<text x="62" y="505" fill="#909BB9" font-size="14" letter-spacing="1.5">TYPED DEPENDENCIES  /  CHAIN CREDITING</text>
+<!-- Conversation panel -->
+<rect x="720" y="48" width="658" height="464" rx="20" fill="#10172C" stroke="#3C405C"/>
+<text x="750" y="87" fill="#E8E9F7" font-size="16" font-weight="700">ONE VIDEO. ONE CONTINUING CONVERSATION.</text>
+<g stroke="#485575" fill="#202E48">
+<rect x="752" y="111" width="88" height="52" rx="7"/><rect x="850" y="111" width="88" height="52" rx="7"/><rect x="948" y="111" width="88" height="52" rx="7"/><rect x="1046" y="111" width="88" height="52" rx="7"/><rect x="1144" y="111" width="88" height="52" rx="7"/>
+</g>
+<g fill="#5EEAD4" opacity=".6"><path d="M767 151l18-24 16 16 12-8 13 16z"/><path d="M865 151l18-17 16 9 12-20 13 28z"/><path d="M963 151l18-24 16 16 12-8 13 16z"/><path d="M1061 151l18-17 16 9 12-20 13 28z"/><path d="M1159 151l18-24 16 16 12-8 13 16z"/></g>
+<text x="1250" y="142" fill="#9EAAC5" font-size="19">…128</text>
+<path d="M752 188H1346" stroke="#2C3550"/>
+<g fill="#E6E7F3" font-size="16">
+<rect x="752" y="213" width="512" height="49" rx="10" fill="#202942"/>
+<text x="770" y="244"><tspan fill="#95A5C9" font-weight="700">T1</tspan><tspan dx="18">Identify an object in the video.</tspan></text>
+<rect x="790" y="298" width="512" height="49" rx="10" fill="#143A3B" stroke="#5EEAD4" stroke-opacity=".35"/>
+<text x="808" y="329"><tspan fill="#5EEAD4" font-weight="700">T2</tspan><tspan dx="18">Return to that same scene.</tspan></text>
+<rect x="828" y="401" width="512" height="49" rx="10" fill="#30264E" stroke="#B7A5FF" stroke-opacity=".4"/>
+<text x="846" y="432"><tspan fill="#B7A5FF" font-weight="700">T3</tspan><tspan dx="18">Build on an earlier answer.</tspan></text>
+</g>
+<path d="M763 264V280H800V296" fill="none" stroke="#5EEAD4" stroke-width="2" marker-end="url(#arrowTeal)"/>
+<text x="829" y="285" fill="#5EEAD4" font-size="12" letter-spacing="1.3">EPISODIC DEPENDENCY</text>
+<path d="M1319 238H1351V382H840V399" fill="none" stroke="#B7A5FF" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrowPurple)"/>
+<rect x="893" y="368" width="205" height="24" fill="#10172C"/>
+<text x="907" y="384" fill="#B7A5FF" font-size="12" letter-spacing="1.3">ANSWER DEPENDENCY</text>
+<text x="753" y="486" fill="#909BB9" font-size="13">Keep every prior model response. Evaluate every dependency.</text>
+</g></svg>

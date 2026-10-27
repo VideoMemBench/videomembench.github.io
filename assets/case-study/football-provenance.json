@@ -1,0 +1,79 @@
+{
+  "source_type": "project_benchmark_video",
+  "published_video_id": "videomembench-231",
+  "published_video_path": "videos/videomembench-231.mp4",
+  "video_title": "Birmingham City vs. Nottingham Forest",
+  "source_description": "Exported from the existing VideoMemBench project video after verifying the old-to-release ID mapping against the annotations. Excerpts preserve chronological source order and cover every displayed question evidence window.",
+  "source_duration_seconds": 6049.134,
+  "source_url": "https://www.youtube.com/watch?v=hF4Pk6_s1uE",
+  "exported_at": "2026-10-20",
+  "file": "football.mp4",
+  "poster": "football-poster.webp",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "duration_seconds": 143.0,
+  "encoding": {
+    "codec": "H.264",
+    "pixel_format": "yuv420p",
+    "frame_rate": "30/1",
+    "audio": false,
+    "faststart": true,
+    "crf": 23,
+    "maxrate": "1100k",
+    "preset": "fast"
+  },
+  "playback_segments": [
+    {
+      "source_start": 0,
+      "source_end": 90,
+      "playback_start": 0,
+      "playback_end": 90
+    },
+    {
+      "source_start": 2938,
+      "source_end": 2982,
+      "playback_start": 90,
+      "playback_end": 134
+    },
+    {
+      "source_start": 6040,
+      "source_end": 6049,
+      "playback_start": 134,
+      "playback_end": 143
+    }
+  ],
+  "timeline": "Chronological excerpts joined once with cuts between intervals. No repeated or reordered footage. Question labels retain original source-video timestamps; playback timestamps use this mapping.",
+  "visual_verification_samples": [
+    {
+      "source_seconds": 0.5,
+      "playback_seconds": 0.5
+    },
+    {
+      "source_seconds": 44,
+      "playback_seconds": 44
+    },
+    {
+      "source_seconds": 80,
+      "playback_seconds": 80
+    },
+    {
+      "source_seconds": 2945,
+      "playback_seconds": 97
+    },
+    {
+      "source_seconds": 2965,
+      "playback_seconds": 117
+    },
+    {
+      "source_seconds": 6044,
+      "playback_seconds": 138
+    }
+  ],
+  "poster_playback_seconds": 0.5,
+  "decode_check": "passed",
+  "transfer_sha256_verified": true,
+  "bytes": 19979021,
+  "sha256": "9708d1e72ca4bc51608480554bf0c096a05d7b4089e2b94e797928a87f601875"
+}

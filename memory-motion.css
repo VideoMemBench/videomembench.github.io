@@ -1,0 +1,36 @@
+/* Progressively enhanced SVGs retain the exact size of the static diagrams. */
+#overview .diagram-figure > .memory-diagram {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.memory-diagram [data-reveal] {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .memory-diagram [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .memory-diagram [data-draw] {
+    opacity: 1 !important;
+    mask: none !important;
+  }
+}
+
+@media print {
+  .memory-diagram [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .memory-diagram [data-draw] {
+    opacity: 1 !important;
+    mask: none !important;
+  }
+}

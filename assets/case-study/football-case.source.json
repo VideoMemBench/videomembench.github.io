@@ -1,0 +1,166 @@
+{
+  "source_note": "Complete seven-turn record from annotations_release_v4.jsonl. All seven turns appear in the interactive case.",
+  "provenance": {
+    "annotation_file": "annotations_release_v4.jsonl",
+    "record_line": 231,
+    "annotation_file_sha256": "1629b3dc2a3c300e1c9845d8816153bbc5c8f85d311a18b5bb829c95e0a55c0b",
+    "public_annotation_file": "release/annotations.jsonl",
+    "public_annotation_record_line": 231,
+    "public_annotation_file_sha256": "463f70a673e684baf689eedb4f06a86dc71222b75e533aeca900b22fee13b634",
+    "public_release_comparison": "Questions, question types, options, gold answers, dependency parents and dependency types exactly match release/annotations.jsonl. Evidence windows and dependency refs come from annotations_release_v4.jsonl.",
+    "annotation_license": "CC BY-NC-SA 4.0",
+    "evidence_time_conversion": "timestamp_seconds uses the first original evidence window start. Each evidence window preserves source t_start and t_end and also supplies parsed numeric seconds. These values use the original full-video timeline, not a shortened preview timeline.",
+    "source_video": {
+      "youtube_id": "hF4Pk6_s1uE",
+      "url": "https://www.youtube.com/watch?v=hF4Pk6_s1uE",
+      "title": "FULL MATCH： Birmingham City v Nottingham Forest ｜ Barclays WSL 2 25⧸26 [hF4Pk6_s1uE].mp4",
+      "caption_file": "labels_gemini (3).json",
+      "caption_record_index": 97,
+      "caption_file_sha256": "47bb935c472e51d9d954c8e125d282d43e60871239408210a4c6e38fde0f8a54",
+      "source_url_basis": "YouTube video ID in the original caption record video_name. The caption title identifies Birmingham City v Nottingham Forest.",
+      "duration_seconds": 6049.133333333333,
+      "fps": 60.0,
+      "frame_count": 362948
+    }
+  },
+  "record": {
+    "video_id": "videomembench-231",
+    "video_name": "videomembench-231.mp4",
+    "video_path": "videos/videomembench-231.mp4",
+    "dialogue": [
+      {
+        "turn_id": "T1",
+        "type": "open_structured",
+        "dependency": null,
+        "question": "At kickoff, what brand is on the ponytailed player's jersey?",
+        "options": null,
+        "answer": "Nike",
+        "evidence": [
+          {
+            "t_start": "0:00",
+            "t_end": "0:01"
+          }
+        ]
+      },
+      {
+        "turn_id": "T2",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T1"
+          ],
+          "ref": [
+            "the ponytailed player at kickoff"
+          ],
+          "dep_type": {
+            "T1": "episodic"
+          }
+        },
+        "question": "Is the player from T1 left or right of the center circle in the first attack?",
+        "options": null,
+        "answer": "Left",
+        "evidence": [
+          {
+            "t_start": "0:41",
+            "t_end": "0:49"
+          }
+        ]
+      },
+      {
+        "turn_id": "T3",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T1",
+            "T2"
+          ],
+          "ref": [
+            "the ponytailed player at kickoff",
+            "the player's position relative to the center circle"
+          ],
+          "dep_type": {
+            "T1": "episodic",
+            "T2": "answer"
+          }
+        },
+        "question": "How does the player from T1 move relative to the center circle after T2?",
+        "options": null,
+        "answer": "Moves away from the center circle",
+        "evidence": [
+          {
+            "t_start": "0:41",
+            "t_end": "0:51"
+          }
+        ],
+        "answer_text": "Moves away from the center circle"
+      },
+      {
+        "turn_id": "T4",
+        "type": "open_structured",
+        "question": "What does the ponytailed player wearing number 16 do near the penalty arc?",
+        "options": null,
+        "answer": "Wipes the ball and throws it out.",
+        "evidence": [
+          {
+            "t_start": "1:17",
+            "t_end": "1:27"
+          }
+        ],
+        "dependency": null
+      },
+      {
+        "turn_id": "T5",
+        "type": "open_structured",
+        "dependency": null,
+        "question": "Who scored Birmingham City's second goal?",
+        "options": null,
+        "answer": "LEIDHAMMAR",
+        "evidence": [
+          {
+            "t_start": "49:20",
+            "t_end": "49:40"
+          }
+        ],
+        "answer_text": "LEIDHAMMAR"
+      },
+      {
+        "turn_id": "T6",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T5"
+          ],
+          "ref": [
+            "the scorer of Birmingham City's second goal"
+          ],
+          "dep_type": {
+            "T5": "answer"
+          }
+        },
+        "question": "What color is the opposing goalkeeper's jersey when the player from T5 scores?",
+        "options": null,
+        "answer": "Yellow",
+        "evidence": [
+          {
+            "t_start": "49:00",
+            "t_end": "49:40"
+          }
+        ]
+      },
+      {
+        "turn_id": "T7",
+        "type": "open_structured",
+        "question": "Per the match summary graphic, who won?",
+        "options": null,
+        "answer": "Birmingham City",
+        "evidence": [
+          {
+            "t_start": "100:42",
+            "t_end": "100:49"
+          }
+        ],
+        "dependency": null
+      }
+    ]
+  }
+}

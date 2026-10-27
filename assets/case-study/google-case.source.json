@@ -1,0 +1,327 @@
+{
+  "video_id": "videomembench-226",
+  "video_name": "videomembench-226.mp4",
+  "video_path": "videos/videomembench-226.mp4",
+  "dialogue": [
+    {
+      "turn_id": "T1",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "When the speaker introduces the TPU 8t, what is the stated multiplier for its raw computing power increase over the previous generation?",
+      "options": null,
+      "answer": "3x",
+      "evidence": [
+        {
+          "t_start": "10:50",
+          "t_end": "11:02"
+        }
+      ],
+      "answer_text": "3x"
+    },
+    {
+      "turn_id": "T2",
+      "type": "multi_choice_question",
+      "dependency": {
+        "depends_on": [
+          "T1"
+        ],
+        "ref": [
+          "the TPU 8t"
+        ],
+        "dep_type": {
+          "T1": "episodic"
+        }
+      },
+      "question": "What is the number of TPU chips shown in a single training cluster for the product introduced in T1?",
+      "options": {
+        "A": "2M+",
+        "B": "3M+",
+        "C": "5M+",
+        "D": "500K+",
+        "E": "100K+",
+        "F": "10M+",
+        "G": "1.5M+",
+        "H": "1M+"
+      },
+      "answer": "H",
+      "evidence": [
+        {
+          "t_start": "11:20",
+          "t_end": "11:32"
+        }
+      ],
+      "answer_text": "1M+"
+    },
+    {
+      "turn_id": "T3",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "In the claymation protein-folding explainer, which four labeled stages appear in order?",
+      "options": null,
+      "answer": "Amino Acids → Alpha Helix → Beta Sheet → Folded Protein.",
+      "evidence": [
+        {
+          "t_start": "16:47",
+          "t_end": "16:57"
+        }
+      ]
+    },
+    {
+      "turn_id": "T4",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "In the Gemini Omni mirror-editing prompt, what three visual changes are requested when the man touches the mirror?",
+      "options": null,
+      "answer": "The mirror ripples like liquid around his finger, the room becomes dark, and numerous shape-shifting photorealistic 3D prisms appear throughout the room.",
+      "evidence": [
+        {
+          "t_start": "17:16",
+          "t_end": "17:19"
+        }
+      ]
+    },
+    {
+      "turn_id": "T5",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T4"
+        ],
+        "ref": [
+          "the three requested changes identified in T4"
+        ],
+        "dep_type": {
+          "T4": "answer"
+        }
+      },
+      "question": "Does the generated video visibly implement all three requested changes identified in T4?",
+      "options": null,
+      "answer": "Yes.",
+      "evidence": [
+        {
+          "t_start": "17:14",
+          "t_end": "17:27"
+        }
+      ]
+    },
+    {
+      "turn_id": "T6",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T5"
+        ],
+        "ref": [
+          "the mirror-edit result evaluated in T5"
+        ],
+        "dep_type": {
+          "T5": "episodic"
+        }
+      },
+      "question": "After the demonstration in T5, how does the man’s appearance and surroundings change in sequence?",
+      "options": null,
+      "answer": "The scene changes to one covered with foliage, then to an ornate period setting, a wireframe rendering, a stained-glass rendering, a sci-fi room overlooking a Mars-like landscape, and finally a futuristic light-filled interior.",
+      "evidence": [
+        {
+          "t_start": "17:26",
+          "t_end": "17:34"
+        }
+      ]
+    },
+    {
+      "turn_id": "T7",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T5",
+          "T6"
+        ],
+        "ref": [
+          "the prism-filled mirror result evaluated in T5",
+          "the transformations listed in T6"
+        ],
+        "dep_type": {
+          "T5": "episodic",
+          "T6": "answer"
+        }
+      },
+      "question": "Among the transformations listed in T6, which two scenes show the man wearing the same clothing as in the demonstration in T5?",
+      "options": null,
+      "answer": "The foliage-covered scene and the sci-fi room overlooking a Mars-like landscape.",
+      "evidence": [
+        {
+          "t_start": "17:24",
+          "t_end": "17:33"
+        }
+      ]
+    },
+    {
+      "turn_id": "T8",
+      "type": "open_structured",
+      "dependency": null,
+      "question": "Following TPU 8 and Gemini Omni, what is the third major product introduced in the video?",
+      "options": null,
+      "answer": "Gemini 3.5 Flash.",
+      "evidence": [
+        {
+          "t_start": "22:18",
+          "t_end": "22:25"
+        }
+      ]
+    },
+    {
+      "turn_id": "T9",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T8"
+        ],
+        "ref": [
+          "the model identified in T8"
+        ],
+        "dep_type": {
+          "T8": "answer"
+        }
+      },
+      "question": "On the Artificial Analysis Output Speed slide, where does the model identified in T8 rank in output speed among the models shown?",
+      "options": null,
+      "answer": "First.",
+      "evidence": [
+        {
+          "t_start": "23:03",
+          "t_end": "23:12"
+        }
+      ]
+    },
+    {
+      "turn_id": "T10",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T8"
+        ],
+        "ref": [
+          "the third major product identified in T8"
+        ],
+        "dep_type": {
+          "T8": "answer"
+        }
+      },
+      "question": "What product is introduced immediately after the product identified in T8?",
+      "options": null,
+      "answer": "Google Antigravity 2.0.",
+      "evidence": [
+        {
+          "t_start": "23:44",
+          "t_end": "24:00"
+        }
+      ]
+    },
+    {
+      "turn_id": "T11",
+      "type": "multi_choice_question",
+      "dependency": {
+        "depends_on": [
+          "T10"
+        ],
+        "ref": [
+          "the product identified in T10"
+        ],
+        "dep_type": {
+          "T10": "episodic"
+        }
+      },
+      "question": "When the product identified in T10 finishes thinking in the demonstration, how many subagents are shown as running?",
+      "options": {
+        "A": "5 subagents",
+        "B": "8 subagents",
+        "C": "11 subagents",
+        "D": "12 subagents",
+        "E": "16 subagents",
+        "F": "14 subagents",
+        "G": "20 subagents",
+        "H": "4 subagents"
+      },
+      "answer": "F",
+      "evidence": [
+        {
+          "t_start": "25:54",
+          "t_end": "25:57"
+        }
+      ],
+      "answer_text": "14 subagents"
+    },
+    {
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T10"
+        ],
+        "ref": [
+          "the product identified in T10"
+        ],
+        "dep_type": {
+          "T10": "episodic"
+        }
+      },
+      "question": "During the live coding demonstration for the product identified in T10, which two custom system-call handlers are added to connect the user-space game to the new video and keyboard drivers?",
+      "options": null,
+      "answer": "sys_fb_info and sys_kb_read.",
+      "evidence": [
+        {
+          "t_start": "29:51",
+          "t_end": "29:55"
+        }
+      ],
+      "turn_id": "T12"
+    },
+    {
+      "turn_id": "T13",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T12"
+        ],
+        "ref": [
+          "the two handlers from T12"
+        ],
+        "dep_type": {
+          "T12": "answer"
+        }
+      },
+      "question": "The two handlers from T12 are then registered in which function?",
+      "options": null,
+      "answer": "syscall_init().",
+      "evidence": [
+        {
+          "t_start": "29:51",
+          "t_end": "29:53"
+        }
+      ]
+    },
+    {
+      "turn_id": "T14",
+      "type": "open_structured",
+      "dependency": {
+        "depends_on": [
+          "T12"
+        ],
+        "ref": [
+          "the two handlers from T12"
+        ],
+        "dep_type": {
+          "T12": "answer"
+        }
+      },
+      "question": "What two pieces of data are passed from the kernel to user space by the handlers from T12?",
+      "options": null,
+      "answer": "Framebuffer layout metadata and keyboard scancodes.",
+      "evidence": [
+        {
+          "t_start": "29:55",
+          "t_end": "29:57"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 640 400" class="memory-diagram" role="img" aria-labelledby="answer-title answer-desc">
+  <title id="answer-title">Answer dependency: carry an earlier answer forward</title>
+  <desc id="answer-desc">An abstract video begins a three-turn conversation. Solid purple arrows carry the answer from turn one into turns two and three. Thin gray arrows indicate conversation order.</desc>
+  <defs>
+    <style>
+      .memory-diagram text { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .memory-diagram .label { fill: #78767e; font-size: 13px; }
+      .memory-diagram .turn { fill: #78767e; font-size: 16px; }
+      .memory-diagram .question { fill: #29272e; font-size: 21px; }
+    </style>
+    <marker id="answer-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M1 1L5.5 3.5L1 6" fill="none" stroke="#7053b7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="answer-order" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M1 1L5.5 3.5L1 6" fill="none" stroke="#bab8c0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g data-reveal="0,.12">
+    <text x="88" y="30" class="label">Video</text>
+    <text x="520" y="30" class="label" text-anchor="end">Time →</text>
+  </g>
+  <g transform="translate(88 48)">
+    <g data-reveal=".03,.23">
+      <g transform="translate(0)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L32 28L50 48L65 36L84 58Z" fill="#c8c5cf"/>
+        <circle cx="75" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+    <g data-reveal=".07,.27">
+      <g transform="translate(112)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L29 41L46 51L66 27L84 58Z" fill="#c8c5cf"/>
+        <circle cx="26" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+    <g data-reveal=".11,.31">
+      <g transform="translate(224)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L32 31L49 50L68 37L84 58Z" fill="#c8c5cf"/>
+        <circle cx="75" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+    <g data-reveal=".15,.35">
+      <g transform="translate(336)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L29 42L45 51L66 28L84 58Z" fill="#c8c5cf"/>
+        <circle cx="26" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+  </g>
+  <g data-reveal=".15,.35">
+    <path d="M88 136H520" stroke="#dedce3" stroke-width="1"/>
+    <text x="88" y="166" class="label">Conversation</text>
+    <path d="M88 182H552M88 239H552M88 305H552M88 371H552" stroke="#dedce3" stroke-width="1"/>
+  </g>
+  <g data-reveal=".25,.48">
+    <text x="88" y="218" font-size="16" fill="#7053b7">T1</text>
+    <text x="140" y="218" class="question">An earlier <tspan fill="#7053b7">model answer</tspan></text>
+  </g>
+  <g data-reveal=".48,.7">
+    <path d="M99 246V261" fill="none" stroke="#bab8c0" stroke-width="1.2" marker-end="url(#answer-order)"/>
+    <text x="88" y="284" class="turn">T2</text>
+    <text x="140" y="284" class="question">A follow-up question</text>
+  </g>
+  <g data-reveal=".68,.88">
+    <path d="M99 312V327" fill="none" stroke="#bab8c0" stroke-width="1.2" marker-end="url(#answer-order)"/>
+    <text x="88" y="350" class="turn">T3</text>
+    <text x="140" y="350" class="question">Build on the earlier answer.</text>
+  </g>
+  <g data-reveal=".42,.56">
+    <circle cx="552" cy="211" r="3" fill="#7053b7"/>
+  </g>
+  <path data-draw=".42,.93" d="M552 211H587Q594 211 594 218V337Q594 344 587 344H563" fill="none" stroke="#7053b7" stroke-width="1.6" stroke-linecap="round" marker-end="url(#answer-arrow)"/>
+  <path data-draw=".58,.76" d="M594 278H563" fill="none" stroke="#7053b7" stroke-width="1.6" stroke-linecap="round" marker-end="url(#answer-arrow)"/>
+</svg>

@@ -1,0 +1,282 @@
+{
+  "source": "Table 4: Frame-count ablation on VideoMemBench under self-rollout.",
+  "protocol": "13 open-weight models evaluated with 32 or 64 uniformly sampled frames per video, using the same self-rollout protocol and scoring rules as the 128-frame evaluation. Scores are percentages; higher is better.",
+  "budgets": [
+    64,
+    32
+  ],
+  "provenance": {
+    "source_archive": "VideoMemBench__How_Well_Do_MLLMsRemember_in_Video_Conversations_.zip",
+    "source_file": "iclr2027_conference.tex",
+    "source_table_label": "tab:frame-ablation",
+    "source_table_caption": "Frame-count ablation on VideoMemBench under self-rollout.",
+    "source_tex_sha256": "1a5fc66e7d65107ca3cadea5e0f22f3472e32bd075dbc5b3fc436e07b97d60b1",
+    "source_lines": {
+      "32_frames": "994–1006",
+      "64_frames": "1008–1020"
+    },
+    "extraction": "Parsed directly from the LaTeX table. Values and model names are unchanged; rows within each frame budget retain the manuscript order."
+  },
+  "results": [
+    {
+      "frames": 64,
+      "model": "Qwen3-VL-235B-A22B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 40.3,
+      "EpiDepAcc": 39.3,
+      "AnsDepAcc": 15.6,
+      "Overall": 31.7
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3.5-122B-A10B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 37.8,
+      "EpiDepAcc": 36.5,
+      "AnsDepAcc": 15.2,
+      "Overall": 29.8
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3.5-27B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 37.9,
+      "EpiDepAcc": 36.7,
+      "AnsDepAcc": 14.8,
+      "Overall": 29.8
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3-VL-32B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 37.8,
+      "EpiDepAcc": 36.1,
+      "AnsDepAcc": 14.5,
+      "Overall": 29.5
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3.5-35B-A3B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 37.0,
+      "EpiDepAcc": 36.7,
+      "AnsDepAcc": 13.5,
+      "Overall": 29.1
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3-VL-30B-A3B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 33.6,
+      "EpiDepAcc": 32.9,
+      "AnsDepAcc": 11.5,
+      "Overall": 26.0
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3-VL-8B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 32.7,
+      "EpiDepAcc": 32.0,
+      "AnsDepAcc": 11.9,
+      "Overall": 25.5
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3.5-9B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 33.4,
+      "EpiDepAcc": 33.2,
+      "AnsDepAcc": 9.6,
+      "Overall": 25.4
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3-VL-4B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 31.3,
+      "EpiDepAcc": 30.3,
+      "AnsDepAcc": 12.1,
+      "Overall": 24.5
+    },
+    {
+      "frames": 64,
+      "model": "Keye-VL-1.5-8B",
+      "family": "keye",
+      "group": "Open-weight",
+      "TurnAcc": 24.5,
+      "EpiDepAcc": 24.9,
+      "AnsDepAcc": 6.3,
+      "Overall": 18.5
+    },
+    {
+      "frames": 64,
+      "model": "Qwen2.5-VL-7B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 24.1,
+      "EpiDepAcc": 22.7,
+      "AnsDepAcc": 6.4,
+      "Overall": 17.7
+    },
+    {
+      "frames": 64,
+      "model": "Qwen2.5-VL-3B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 22.5,
+      "EpiDepAcc": 22.5,
+      "AnsDepAcc": 5.1,
+      "Overall": 16.7
+    },
+    {
+      "frames": 64,
+      "model": "Qwen3.5-0.8B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 21.0,
+      "EpiDepAcc": 21.1,
+      "AnsDepAcc": 4.7,
+      "Overall": 15.6
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3-VL-235B-A22B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 36.3,
+      "EpiDepAcc": 37.8,
+      "AnsDepAcc": 14.5,
+      "Overall": 29.5
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3.5-122B-A10B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 35.0,
+      "EpiDepAcc": 35.2,
+      "AnsDepAcc": 10.7,
+      "Overall": 27.0
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3.5-35B-A3B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 34.5,
+      "EpiDepAcc": 34.1,
+      "AnsDepAcc": 12.3,
+      "Overall": 27.0
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3.5-27B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 34.9,
+      "EpiDepAcc": 34.2,
+      "AnsDepAcc": 11.7,
+      "Overall": 26.9
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3-VL-32B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 34.1,
+      "EpiDepAcc": 32.6,
+      "AnsDepAcc": 13.1,
+      "Overall": 26.6
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3-VL-30B-A3B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 32.1,
+      "EpiDepAcc": 32.5,
+      "AnsDepAcc": 8.0,
+      "Overall": 24.2
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3.5-9B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 29.8,
+      "EpiDepAcc": 30.4,
+      "AnsDepAcc": 8.6,
+      "Overall": 22.9
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3-VL-8B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 29.4,
+      "EpiDepAcc": 29.4,
+      "AnsDepAcc": 9.2,
+      "Overall": 22.7
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3-VL-4B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 29.0,
+      "EpiDepAcc": 29.0,
+      "AnsDepAcc": 8.8,
+      "Overall": 22.3
+    },
+    {
+      "frames": 32,
+      "model": "Qwen2.5-VL-7B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 23.2,
+      "EpiDepAcc": 23.7,
+      "AnsDepAcc": 4.9,
+      "Overall": 17.3
+    },
+    {
+      "frames": 32,
+      "model": "Keye-VL-1.5-8B",
+      "family": "keye",
+      "group": "Open-weight",
+      "TurnAcc": 23.3,
+      "EpiDepAcc": 23.1,
+      "AnsDepAcc": 5.1,
+      "Overall": 17.2
+    },
+    {
+      "frames": 32,
+      "model": "Qwen2.5-VL-3B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 22.6,
+      "EpiDepAcc": 23.4,
+      "AnsDepAcc": 4.7,
+      "Overall": 16.9
+    },
+    {
+      "frames": 32,
+      "model": "Qwen3.5-0.8B",
+      "family": "qwen",
+      "group": "Open-weight",
+      "TurnAcc": 20.1,
+      "EpiDepAcc": 21.8,
+      "AnsDepAcc": 4.7,
+      "Overall": 15.5
+    }
+  ]
+}

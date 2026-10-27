@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 640 400" class="memory-diagram" role="img" aria-labelledby="episodic-title episodic-desc">
+  <title id="episodic-title">Episodic dependency: return to an earlier scene</title>
+  <desc id="episodic-desc">Four abstract landscape thumbnails represent a video. Turn one identifies an object. A purple dashed arrow connects the earlier scene directly to turn two, which revisits that scene.</desc>
+  <defs>
+    <style>
+      .memory-diagram text { font-family: "Helvetica Neue", Arial, sans-serif; font-weight: 400; }
+      .memory-diagram .label { fill: #78767e; font-size: 13px; }
+      .memory-diagram .turn { fill: #78767e; font-size: 16px; }
+      .memory-diagram .question { fill: #29272e; font-size: 21px; }
+    </style>
+    <marker id="episodic-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M1 1L5.5 3.5L1 6" fill="none" stroke="#7053b7" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="episodic-order" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <path d="M1 1L5.5 3.5L1 6" fill="none" stroke="#bab8c0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <g data-reveal="0,.12">
+    <text x="88" y="30" class="label">Video</text>
+    <text x="520" y="30" class="label" text-anchor="end">Time →</text>
+  </g>
+  <g transform="translate(88 48)">
+    <g data-reveal=".03,.23">
+      <g transform="translate(0)">
+        <rect width="96" height="72" rx="3" fill="#f0ecf7" stroke="#8c76bc"/>
+        <path d="M12 58L32 28L50 48L65 36L84 58Z" fill="#aa98c9"/>
+        <circle cx="75" cy="20" r="3.5" fill="#aa98c9"/>
+      </g>
+    </g>
+    <g data-reveal=".07,.27">
+      <g transform="translate(112)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L29 41L46 51L66 27L84 58Z" fill="#c8c5cf"/>
+        <circle cx="26" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+    <g data-reveal=".11,.31">
+      <g transform="translate(224)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L32 31L49 50L68 37L84 58Z" fill="#c8c5cf"/>
+        <circle cx="75" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+    <g data-reveal=".15,.35">
+      <g transform="translate(336)">
+        <rect width="96" height="72" rx="3" fill="#f0eff2" stroke="#dedce3"/>
+        <path d="M12 58L29 42L45 51L66 28L84 58Z" fill="#c8c5cf"/>
+        <circle cx="26" cy="20" r="3.5" fill="#c8c5cf"/>
+      </g>
+    </g>
+  </g>
+  <g data-reveal=".15,.35">
+    <path d="M88 136H520" stroke="#dedce3" stroke-width="1"/>
+    <text x="88" y="194" class="label">Conversation</text>
+    <path d="M88 210H552M88 267H552M88 362H552" stroke="#dedce3" stroke-width="1"/>
+  </g>
+  <g data-reveal=".35,.55">
+    <path d="M88 136H184" stroke="#7053b7" stroke-width="2"/>
+    <text x="136" y="158" text-anchor="middle" font-size="13" fill="#7053b7">Earlier scene</text>
+  </g>
+  <g data-reveal=".25,.48">
+    <text x="88" y="246" class="turn">T1</text>
+    <text x="140" y="246" class="question">Identify an object in the video.</text>
+  </g>
+  <g data-reveal=".48,.7">
+    <path d="M99 280V300" fill="none" stroke="#bab8c0" stroke-width="1.2" marker-end="url(#episodic-order)"/>
+    <text x="88" y="341" font-size="16" fill="#7053b7">T2</text>
+    <text x="140" y="341" class="question">Return to <tspan fill="#7053b7">that same scene.</tspan></text>
+  </g>
+  <path data-draw=".52,.86" d="M136 167V168Q136 172 132 172H47Q40 172 40 179V328Q40 335 47 335H76" fill="none" stroke="#7053b7" stroke-width="1.6" stroke-dasharray="5 5" stroke-linecap="round" marker-end="url(#episodic-arrow)"/>
+</svg>

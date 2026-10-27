@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="160" viewBox="0 0 1320 160" role="img" aria-labelledby="title desc">
+  <title id="title">Evaluation protocol</title>
+  <desc id="desc">Sample 128 timestamped frames, run questions in dialogue order with the model's previous responses, grade each response, and compute TurnAcc, EpiDepAcc, AnsDepAcc, and their mean.</desc>
+  <rect width="1320" height="160" fill="#fff"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif">
+    <path d="M12 12H1308" fill="none" stroke="#d8dadd" stroke-width="1"/>
+    <g fill="#24292f" font-size="25" font-weight="600">
+      <text x="12" y="55">Sample frames</text>
+      <text x="342" y="55">Run self-rollout</text>
+      <text x="672" y="55">Grade responses</text>
+      <text x="1002" y="55">Compute metrics</text>
+    </g>
+    <g fill="none" stroke="#8c9198" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M280 46h34m-7-6 7 6-7 6"/>
+      <path d="M610 46h34m-7-6 7 6-7 6"/>
+      <path d="M940 46h34m-7-6 7 6-7 6"/>
+    </g>
+    <g fill="#57606a" font-size="19">
+      <text x="12" y="99">128 uniformly sampled frames</text>
+      <text x="12" y="130">Timestamped; reused across turns</text>
+      <text x="342" y="99">Questions in dialogue order</text>
+      <text x="342" y="130">Retain prior model responses</text>
+      <text x="672" y="99">MC: option-key match</text>
+      <text x="672" y="130">Open QA: GPT-5.4 mini judge</text>
+      <text x="1002" y="99">TurnAcc · EpiDepAcc · AnsDepAcc</text>
+      <text x="1002" y="130" fill="#6e56ad">Overall = mean of the three</text>
+    </g>
+  </g>
+</svg>

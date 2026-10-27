@@ -1,0 +1,247 @@
+{
+  "source_note": "Complete nine-turn record from annotations_release_v4.jsonl. The interactive case displays T1–T8.",
+  "provenance": {
+    "annotation_file": "annotations_release_v4.jsonl",
+    "record_line": 85,
+    "annotation_file_sha256": "1629b3dc2a3c300e1c9845d8816153bbc5c8f85d311a18b5bb829c95e0a55c0b",
+    "public_annotation_file": "release/annotations.jsonl",
+    "public_annotation_record_line": 85,
+    "public_annotation_file_sha256": "463f70a673e684baf689eedb4f06a86dc71222b75e533aeca900b22fee13b634",
+    "public_release_comparison": "Questions, question types, options, gold answers, dependency parents and dependency types exactly match release/annotations.jsonl. Evidence windows and dependency refs come from annotations_release_v4.jsonl.",
+    "annotation_license": "CC BY-NC-SA 4.0",
+    "evidence_time_conversion": "timestamp_seconds uses the first original evidence window start. Each evidence window preserves source t_start and t_end and also supplies parsed numeric seconds."
+  },
+  "record": {
+    "video_id": "videomembench-85",
+    "video_name": "videomembench-85.mp4",
+    "video_path": "videos/videomembench-85.mp4",
+    "dialogue": [
+      {
+        "turn_id": "T1",
+        "type": "open_structured",
+        "dependency": null,
+        "question": "At the opening jump ball, which white-jersey UCF player is closest to the referee, and what is their hairstyle?",
+        "options": null,
+        "answer": "UCF #2 with a top-knot",
+        "evidence": [
+          {
+            "t_start": "0:00",
+            "t_end": "0:02"
+          }
+        ],
+        "answer_text": "UCF #2 with a top-knot"
+      },
+      {
+        "turn_id": "T2",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T1"
+          ],
+          "ref": [
+            "the UCF player nearest the referee"
+          ],
+          "dep_type": {
+            "T1": "episodic"
+          }
+        },
+        "question": "Right after the jump ball, is the UCF player from T1 guarding the dark-jersey number 0 ball handler?",
+        "options": null,
+        "answer": "Yes.",
+        "evidence": [
+          {
+            "t_start": "0:11",
+            "t_end": "0:13"
+          }
+        ]
+      },
+      {
+        "turn_id": "T3",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T2"
+          ],
+          "ref": [
+            "the dark-jersey team"
+          ],
+          "dep_type": {
+            "T2": "episodic"
+          }
+        },
+        "question": "What foul count is shown beneath the score for the dark-jersey team from T2?",
+        "options": null,
+        "answer": "0 fouls (no foul count is displayed beneath Arizona's score during the play right after the jump ball)",
+        "evidence": [
+          {
+            "t_start": "0:11",
+            "t_end": "0:13"
+          }
+        ]
+      },
+      {
+        "turn_id": "T4",
+        "type": "multi_choice_question",
+        "dependency": {
+          "depends_on": [
+            "T1",
+            "T2"
+          ],
+          "ref": [
+            "the UCF player with the top-knot hairstyle",
+            "the number-0 ball handler in the dark jersey"
+          ],
+          "dep_type": {
+            "T1": "episodic",
+            "T2": "episodic"
+          }
+        },
+        "question": "Do both the player from T1 and the player from T2 wear a wristband on the left arm?",
+        "options": {
+          "A": "Yes, both players have a visible wristband on their left arm.",
+          "B": "No, neither player has a visible wristband on their left arm.",
+          "C": "Only the player with the top-knot has a visible wristband on his left arm.",
+          "D": "Only the player wearing number 0 has a visible wristband on his left arm."
+        },
+        "answer": "B",
+        "evidence": [
+          {
+            "t_start": "0:11",
+            "t_end": "0:13"
+          }
+        ],
+        "answer_text": "No, neither player has a visible wristband on their left arm."
+      },
+      {
+        "turn_id": "T5",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T4"
+          ],
+          "ref": [
+            "the dark-jersey team"
+          ],
+          "dep_type": {
+            "T4": "episodic"
+          }
+        },
+        "question": "At 00:38, how is the dark-jersey team from T4 set up defensively relative to the three-point arc and the ball handler?",
+        "options": null,
+        "answer": "The Arizona team is playing a man-to-man defense, with all five defenders positioned inside or near the three-point arc, each closely tracking their respective offensive assignments.",
+        "evidence": [
+          {
+            "t_start": "0:39",
+            "t_end": "0:43"
+          }
+        ]
+      },
+      {
+        "turn_id": "T6",
+        "type": "multi_choice_question",
+        "question": "At 01:11, what is the most likely emotional state of the coach in the grey suit?",
+        "options": {
+          "A": "Frustration after a missed defensive stop",
+          "B": "Encouraging a player on the bench",
+          "C": "Celebrating a successful three-point shot",
+          "D": "Disbelief at a referee's call",
+          "E": "Calm satisfaction after a well-run play",
+          "F": "Anxiety about the shot clock",
+          "G": "Amusement at a teammate's mistake",
+          "H": "Urgency while calling a timeout"
+        },
+        "answer": "A",
+        "evidence": [
+          {
+            "t_start": "1:13",
+            "t_end": "1:19"
+          }
+        ],
+        "dependency": null,
+        "answer_text": "Frustration after a missed defensive stop"
+      },
+      {
+        "turn_id": "T7",
+        "type": "open_structured",
+        "question": "For the dark-jersey player established in T2 and T4, what overall win-loss record is shown for that player's team on the score bug at the cited timestamp?",
+        "options": null,
+        "answer": "17-0",
+        "evidence": [
+          {
+            "t_start": "1:30",
+            "t_end": "1:32"
+          }
+        ],
+        "dependency": {
+          "depends_on": [
+            "T2",
+            "T4"
+          ],
+          "ref": [
+            "the number-0 dark-jersey player",
+            "the two players checked for wristbands"
+          ],
+          "dep_type": {
+            "T2": "episodic",
+            "T4": "episodic"
+          }
+        }
+      },
+      {
+        "turn_id": "T8",
+        "type": "true_or_false_question",
+        "dependency": {
+          "depends_on": [
+            "T1",
+            "T4",
+            "T7"
+          ],
+          "ref": [
+            "the UCF top-knot player",
+            "the wristband-checked players",
+            "the player with the recorded foul status"
+          ],
+          "dep_type": {
+            "T1": "episodic",
+            "T4": "episodic",
+            "T7": "episodic"
+          }
+        },
+        "question": "In the team-leaders scoreboard graphic, is the player from T1, T4, or T7 listed as a points leader?",
+        "options": null,
+        "answer": "False",
+        "evidence": [
+          {
+            "t_start": "1:15",
+            "t_end": "1:30"
+          }
+        ]
+      },
+      {
+        "turn_id": "T9",
+        "type": "open_structured",
+        "dependency": {
+          "depends_on": [
+            "T8"
+          ],
+          "ref": [
+            "the scoreboard graphic"
+          ],
+          "dep_type": {
+            "T8": "episodic"
+          }
+        },
+        "question": "In the graphic from T8, what historical milestone would a home-team win represent?",
+        "options": null,
+        "answer": "The on-screen graphic (UCF, vs RANKED OPPONENTS ALL-TIME WINS) shows UCF's all-time wins over ranked opponents: 2 before coach Dawkins and 10 under Dawkins. It does NOT state that a win would be a first-ever victory over a No. 1 team; it presents UCF's historical ranked-opponent win totals (already 12 total).",
+        "evidence": [
+          {
+            "t_start": "1:15",
+            "t_end": "1:30"
+          }
+        ],
+        "answer_text": "The on-screen graphic (UCF, vs RANKED OPPONENTS ALL-TIME WINS) shows UCF's all-time wins over ranked opponents: 2 before coach Dawkins and 10 under Dawkins. It does NOT state that a win would be a first-ever victory over a No. 1 team; it presents UCF's historical ranked-opponent win totals (already 12 total)."
+      }
+    ]
+  }
+}

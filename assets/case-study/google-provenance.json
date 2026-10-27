@@ -1,0 +1,69 @@
+{
+  "source_type": "project_benchmark_video",
+  "published_video_id": "videomembench-226",
+  "published_video_path": "videos/videomembench-226.mp4",
+  "video_title": "Google keynote",
+  "source_description": "Exported from the existing VideoMemBench project video after verifying the old-to-release ID mapping against the annotations. Excerpts preserve chronological source order and cover every displayed question evidence window.",
+  "source_duration_seconds": 2528.166,
+  "source_url": "https://www.youtube.com/watch?v=duHhImuaZGU",
+  "exported_at": "2026-10-20",
+  "file": "google.mp4",
+  "poster": "google-poster.webp",
+  "dimensions": [
+    1280,
+    720
+  ],
+  "duration_seconds": 100.0,
+  "encoding": {
+    "codec": "H.264",
+    "pixel_format": "yuv420p",
+    "frame_rate": "30/1",
+    "audio": false,
+    "faststart": true,
+    "crf": 23,
+    "maxrate": "1100k",
+    "preset": "fast"
+  },
+  "playback_segments": [
+    {
+      "source_start": 648,
+      "source_end": 695,
+      "playback_start": 0,
+      "playback_end": 47
+    },
+    {
+      "source_start": 1004,
+      "source_end": 1057,
+      "playback_start": 47,
+      "playback_end": 100
+    }
+  ],
+  "timeline": "Chronological excerpts joined once with cuts between intervals. No repeated or reordered footage. Question labels retain original source-video timestamps; playback timestamps use this mapping.",
+  "visual_verification_samples": [
+    {
+      "source_seconds": 651,
+      "playback_seconds": 3
+    },
+    {
+      "source_seconds": 687,
+      "playback_seconds": 39
+    },
+    {
+      "source_seconds": 1011,
+      "playback_seconds": 54
+    },
+    {
+      "source_seconds": 1037,
+      "playback_seconds": 80
+    },
+    {
+      "source_seconds": 1050,
+      "playback_seconds": 93
+    }
+  ],
+  "poster_playback_seconds": 2,
+  "decode_check": "passed",
+  "transfer_sha256_verified": true,
+  "bytes": 10382807,
+  "sha256": "04ae2211ec0390b50ad81d296d1013a1f65481a9f18204722881ba53c35fa337"
+}
