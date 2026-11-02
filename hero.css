@@ -203,7 +203,7 @@
 .hero-details {
   --max: calc(1300px + var(--hero-wide-space) * .38);
   padding-top: 25px;
-  padding-bottom: 72px;
+  padding-bottom: 48px;
 }
 
 .hero-details .authors {
@@ -395,7 +395,7 @@
 
   .hero-details {
     padding-top: 10px;
-    padding-bottom: 44px;
+    padding-bottom: 32px;
   }
 
   .hero-details .authors {
