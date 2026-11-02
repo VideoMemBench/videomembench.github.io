@@ -94,6 +94,7 @@ html {
   --max: clamp(1280px, 83.66vw, 1680px);
   --content-background: #fafafa;
   --content-line: #dedce3;
+  padding-top: 56px;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   align-items: start;
@@ -859,6 +860,10 @@ body > footer a:focus-visible {
     padding-bottom: 68px;
   }
 
+  #overview {
+    padding-top: 44px;
+  }
+
   #overview,
   :is(#results, #evaluation) .section-heading {
     column-gap: 36px;
@@ -916,6 +921,10 @@ body > footer a:focus-visible {
   :is(#results, #citation) > .section {
     padding-top: 52px;
     padding-bottom: 52px;
+  }
+
+  #overview {
+    padding-top: 40px;
   }
 
   #overview,
