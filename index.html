@@ -21,6 +21,35 @@
       "url": "https://videomembench.github.io/"
     }
   </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dataset",
+      "name": "VideoMemBench",
+      "description": "VideoMemBench evaluates in-context video memory: the ability to retrieve and reuse information established earlier in a multi-turn conversation about a video. It includes video dialogues with episodic dependencies on previously discussed visual events and answer dependencies on earlier responses.",
+      "url": "https://videomembench.github.io/",
+      "sameAs": "https://huggingface.co/datasets/VideoMemBench/data",
+      "creator": [
+        {"@type": "Person", "name": "Zhengdong Hu"},
+        {"@type": "Person", "name": "Chao Wang"},
+        {"@type": "Person", "name": "Kaituo Feng"},
+        {"@type": "Person", "name": "Huanjin Yao"},
+        {"@type": "Person", "name": "Mingfei Lu"},
+        {"@type": "Person", "name": "Hehe Fan"},
+        {"@type": "Person", "name": "Yi Yang"}
+      ],
+      "citation": {
+        "@type": "ScholarlyArticle",
+        "name": "VideoMemBench: How Well Do MLLMs Remember in Video Conversations?",
+        "url": "https://arxiv.org/abs/2610.40131"
+      },
+      "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "Hugging Face",
+        "url": "https://huggingface.co/datasets"
+      }
+    }
+  </script>
   <link rel="icon" href="favicon.svg?v=4" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="hero.css?v=20261102-1">
@@ -161,7 +190,7 @@
           <a class="button primary" href="https://huggingface.co/datasets/VideoMemBench/data">
             <img class="resource-icon resource-brand" src="assets/icons/huggingface.svg" width="19" height="19" alt="">
             Dataset
-          </span>
+          </a>
           <a class="button" href="#results">
             <svg class="resource-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10h4v10m2 0V4h4v16m2 0V14h4v6M3 20h18"/></svg>
             Leaderboard
