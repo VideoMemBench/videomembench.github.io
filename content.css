@@ -1,9 +1,10 @@
 /* Typography and layout for the research content below the project hero. */
 html {
-  scroll-padding-top: 66px;
+  scroll-padding-top: calc(66px + var(--hero-wide-space) * .014);
 }
 
 :root {
+  --max: clamp(1160px, 75.82vw, 1600px);
   --content-heading-font: Georgia, "Times New Roman", serif;
   --content-body-font: "Helvetica Neue", Arial, sans-serif;
   --content-ink: #24212c;
@@ -28,7 +29,7 @@ html {
   isolation: isolate;
 }
 
-/* Paint a full-width background without widening the 1160px reading area. */
+/* Full-width backgrounds around a bounded, responsive reading area. */
 :where(#overview, #evaluation, body > footer)::before {
   content: "";
   position: absolute;
@@ -90,7 +91,7 @@ html {
 }
 
 #overview {
-  --max: 1280px;
+  --max: clamp(1280px, 83.66vw, 1680px);
   --content-background: #fafafa;
   --content-line: #dedce3;
   display: grid;
@@ -814,6 +815,31 @@ body > footer a:hover {
 
 body > footer a:focus-visible {
   outline-color: var(--footer-ink);
+}
+
+@media (min-width: 1530px) {
+  :is(#overview, #results, #evaluation, #citation) .section-heading h2 {
+    font-size: clamp(52px, 3.4vw, 64px);
+  }
+
+  #overview > .intro,
+  #overview .memory-lead,
+  :is(#results, #evaluation) .section-heading > p:not(.eyebrow) {
+    font-size: clamp(18px, 1.1765vw, 21px);
+    max-width: 65ch;
+  }
+
+  #overview .memory-copy h3 {
+    font-size: clamp(40px, 2.615vw, 48px);
+  }
+
+  #overview .memory-detail {
+    font-size: clamp(16px, 1.046vw, 18px);
+  }
+
+  #results table {
+    font-size: clamp(16px, 1.046vw, 18px);
+  }
 }
 
 @media (max-width: 1100px) {

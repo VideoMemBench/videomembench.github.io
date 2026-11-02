@@ -4,10 +4,12 @@
   --muted: #696b77;
   --purple: #6559cf;
   --line: #e8e8ed;
+  /* Keep the existing layout through 1530px, then grow over the next 1000px. */
+  --hero-wide-space: clamp(0px, calc(100vw - 1530px), 1000px);
 }
 
 .nav {
-  min-height: 66px;
+  min-height: calc(66px + var(--hero-wide-space) * .014);
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -16,7 +18,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 16px;
+  font-size: calc(16px + var(--hero-wide-space) * .003);
   font-weight: 700;
   letter-spacing: -.4px;
 }
@@ -36,8 +38,8 @@
   display: grid;
   place-items: center;
   isolation: isolate;
-  width: min(100%, 1530px);
-  height: clamp(480px, 45vw, 650px);
+  width: 100%;
+  height: clamp(480px, 45vw, calc(650px + var(--hero-wide-space) * .25));
   margin-inline: auto;
   overflow: hidden;
   background: #141519;
@@ -81,13 +83,15 @@
 .frame-strip {
   display: flex;
   gap: 5px;
+  /* Each repeated strip must cover the wall throughout the animation. */
+  min-width: calc(100vw + 240px);
   height: 100%;
 }
 
 .frame-strip img {
   display: block;
-  flex: 0 0 auto;
-  width: clamp(230px, 20vw, 285px);
+  flex: 1 0 auto;
+  width: clamp(230px, 20vw, calc(285px + var(--hero-wide-space) * .095));
   height: 100%;
   object-fit: cover;
   background: #24262b;
@@ -108,13 +112,13 @@
   position: absolute;
   inset: auto 0 0;
   z-index: -1;
-  height: 106px;
+  height: calc(106px + var(--hero-wide-space) * .034);
   background: linear-gradient(180deg, transparent, rgb(255 255 255 / 15%) 28%, #fff 100%);
   pointer-events: none;
 }
 
 .hero-copy {
-  width: min(1232px, calc(100% - 48px));
+  width: min(calc(1232px + var(--hero-wide-space) * .448), calc(100% - 48px));
   padding-bottom: 27px;
   text-shadow: 0 2px 28px rgb(0 0 0 / 20%);
 }
@@ -123,7 +127,7 @@
   margin: 0;
   background: none;
   color: #fff;
-  font-size: clamp(46px, 6.4vw, 98px);
+  font-size: clamp(46px, 6.4vw, calc(98px + var(--hero-wide-space) * .038));
   font-weight: 720;
   letter-spacing: -.055em;
   line-height: 1.12;
@@ -131,9 +135,9 @@
 
 .hero-subtitle {
   margin: 27px auto 0;
-  max-width: 850px;
+  max-width: calc(850px + var(--hero-wide-space) * .25);
   color: rgb(255 255 255 / 93%);
-  font-size: clamp(20px, 2vw, 30px);
+  font-size: clamp(20px, 2vw, calc(30px + var(--hero-wide-space) * .008));
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -.45px;
@@ -142,12 +146,12 @@
 
 .hero-edge {
   position: absolute;
-  inset: auto 36px 112px;
+  inset: auto 36px calc(112px + var(--hero-wide-space) * .038);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  width: min(1300px, calc(100% - 72px));
+  width: min(calc(1300px + var(--hero-wide-space) * .38), calc(100% - 72px));
   margin-inline: auto;
   color: rgb(255 255 255 / 85%);
 }
@@ -156,7 +160,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 13.5px;
+  font-size: calc(13.5px + var(--hero-wide-space) * .0025);
   font-weight: 500;
 }
 
@@ -174,7 +178,7 @@
   border-radius: 5px;
   background: rgb(12 15 20 / 35%);
   color: inherit;
-  font-size: 12.5px;
+  font-size: calc(12.5px + var(--hero-wide-space) * .0025);
 }
 
 .motion-toggle:hover {
@@ -197,29 +201,29 @@
 }
 
 .hero-details {
-  --max: 1300px;
+  --max: calc(1300px + var(--hero-wide-space) * .38);
   padding-top: 25px;
   padding-bottom: 72px;
 }
 
 .hero-details .authors {
   gap: 10px 26px;
-  font-size: 17px;
+  font-size: calc(17px + var(--hero-wide-space) * .003);
   font-weight: 550;
   line-height: 1.8;
 }
 
 .hero-details .affiliations {
-  max-width: 1053px;
+  max-width: calc(1053px + var(--hero-wide-space) * .267);
   margin-top: 16px;
   gap: 6px 25px;
-  font-size: 14.5px;
+  font-size: calc(14.5px + var(--hero-wide-space) * .0025);
   line-height: 1.8;
 }
 
 .hero-details .author-note {
   margin: 14px 0 27px;
-  font-size: 13.5px;
+  font-size: calc(13.5px + var(--hero-wide-space) * .0025);
 }
 
 .hero-details .resources {
@@ -227,11 +231,11 @@
 }
 
 .hero-details .button {
-  min-height: 50px;
+  min-height: calc(50px + var(--hero-wide-space) * .008);
   gap: 9px;
-  padding: 11px 20px;
+  padding: calc(11px + var(--hero-wide-space) * .003) calc(20px + var(--hero-wide-space) * .005);
   border-radius: 6px;
-  font-size: 14.5px;
+  font-size: calc(14.5px + var(--hero-wide-space) * .0025);
   font-weight: 550;
 }
 
@@ -275,6 +279,12 @@
 @keyframes film-drift {
   from { transform: translateX(0); }
   to { transform: translateX(calc(-50% - 2.5px)); }
+}
+
+@media (min-width: 1530px) {
+  .nav nav {
+    font-size: calc(13px + var(--hero-wide-space) * .003);
+  }
 }
 
 @media (max-width: 900px) {
