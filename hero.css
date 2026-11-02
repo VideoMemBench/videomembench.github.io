@@ -275,7 +275,7 @@
 
 @media (min-width: 901px) {
   .hero-stage {
-    aspect-ratio: 12 / 5;
+    aspect-ratio: 21 / 10;
     min-height: 540px;
   }
 }
