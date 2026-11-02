@@ -10,6 +10,7 @@
 
 .nav {
   min-height: calc(66px + var(--hero-wide-space) * .014);
+  padding-inline: clamp(18px, 3vw, 64px);
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -35,6 +36,7 @@
 
 .hero-stage {
   --hero-unit: 1px;
+  --hero-content-unit: clamp(1px, calc(100vw / 1530), 1.15px);
   position: relative;
   display: grid;
   place-items: center;
@@ -120,7 +122,7 @@
 }
 
 .hero-copy {
-  width: min(calc(1232 * var(--hero-unit)), calc(100% - 48 * var(--hero-unit)));
+  width: min(calc(1232 * var(--hero-content-unit)), calc(100% - 48 * var(--hero-content-unit)));
   text-shadow: 0 2px 28px rgb(0 0 0 / 20%);
 }
 
@@ -128,17 +130,17 @@
   margin: 0;
   background: none;
   color: #fff;
-  font-size: clamp(46px, 6vw, calc(94 * var(--hero-unit)));
+  font-size: clamp(46px, 6vw, calc(94 * var(--hero-content-unit)));
   font-weight: 720;
   letter-spacing: -.045em;
   line-height: 1.12;
 }
 
 .hero-subtitle {
-  margin: calc(22 * var(--hero-unit)) auto 0;
-  max-width: calc(850 * var(--hero-unit));
+  margin: calc(22 * var(--hero-content-unit)) auto 0;
+  max-width: calc(850 * var(--hero-content-unit));
   color: rgb(255 255 255 / 93%);
-  font-size: clamp(20px, 1.8vw, calc(27 * var(--hero-unit)));
+  font-size: clamp(20px, 1.8vw, calc(27 * var(--hero-content-unit)));
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -.45px;
@@ -160,26 +162,26 @@
 .hero-explore {
   display: inline-flex;
   align-items: center;
-  gap: calc(10 * var(--hero-unit));
-  font-size: calc(13.5 * var(--hero-unit));
+  gap: calc(10 * var(--hero-content-unit));
+  font-size: calc(13.5 * var(--hero-content-unit));
   font-weight: 500;
 }
 
 .hero-explore span {
-  font-size: calc(18 * var(--hero-unit));
+  font-size: calc(18 * var(--hero-content-unit));
 }
 
 .motion-toggle {
   display: inline-flex;
   align-items: center;
-  gap: calc(8 * var(--hero-unit));
-  min-height: calc(40 * var(--hero-unit));
-  padding: calc(8 * var(--hero-unit)) calc(14 * var(--hero-unit));
+  gap: calc(8 * var(--hero-content-unit));
+  min-height: calc(40 * var(--hero-content-unit));
+  padding: calc(8 * var(--hero-content-unit)) calc(14 * var(--hero-content-unit));
   border: 1px solid rgb(255 255 255 / 25%);
   border-radius: 5px;
   background: rgb(12 15 20 / 35%);
   color: inherit;
-  font-size: calc(12.5 * var(--hero-unit));
+  font-size: calc(12.5 * var(--hero-content-unit));
 }
 
 .motion-toggle:hover {
@@ -204,21 +206,21 @@
 .hero-resources {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  max-width: calc(680 * var(--hero-unit));
-  margin: calc(32 * var(--hero-unit)) auto 0;
-  gap: calc(12 * var(--hero-unit));
+  max-width: calc(680 * var(--hero-content-unit));
+  margin: calc(32 * var(--hero-content-unit)) auto 0;
+  gap: calc(12 * var(--hero-content-unit));
   text-shadow: none;
 }
 
 .hero-resources .button {
-  min-height: calc(50 * var(--hero-unit));
-  gap: calc(9 * var(--hero-unit));
-  padding: calc(12 * var(--hero-unit)) calc(16 * var(--hero-unit));
+  min-height: calc(50 * var(--hero-content-unit));
+  gap: calc(9 * var(--hero-content-unit));
+  padding: calc(12 * var(--hero-content-unit)) calc(16 * var(--hero-content-unit));
   border: 1px solid rgb(255 255 255 / 40%);
   border-radius: 8px;
   background: rgb(18 19 27 / 72%);
   color: #fff;
-  font-size: calc(14.5 * var(--hero-unit));
+  font-size: calc(14.5 * var(--hero-content-unit));
   font-weight: 600;
   white-space: nowrap;
 }
@@ -245,13 +247,13 @@
 }
 
 .hero-resources .resource-icon {
-  width: calc(19 * var(--hero-unit));
-  height: calc(19 * var(--hero-unit));
+  width: calc(19 * var(--hero-content-unit));
+  height: calc(19 * var(--hero-content-unit));
 }
 
 .hero-resources .resource-brand {
-  width: calc(21 * var(--hero-unit));
-  height: calc(21 * var(--hero-unit));
+  width: calc(21 * var(--hero-content-unit));
+  height: calc(21 * var(--hero-content-unit));
 }
 
 .github-mark {
