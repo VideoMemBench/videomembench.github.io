@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://videomembench.github.io/sitemap.xml
