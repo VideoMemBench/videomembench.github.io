@@ -1,0 +1,5 @@
+Files: /favicon.svg, /favicon.png, /favicon.ico
+Source: Google Material Design Icons, public (24px)
+https://github.com/google/material-design-icons/blob/master/src/social/public/materialicons/24px.svg
+License: Apache-2.0; see material-design-icons-LICENSE.txt
+Changes: added a light-blue circular background; recolored the globe blue; resized and converted to PNG and multi-size ICO.
