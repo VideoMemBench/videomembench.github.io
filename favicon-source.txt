@@ -1,5 +1,4 @@
-Files: /favicon.png, /favicon.ico
-Source: Google Material Design Icons, public (24px)
-https://github.com/google/material-design-icons/blob/master/src/social/public/materialicons/24px.svg
-License: Apache-2.0; see material-design-icons-LICENSE.txt
-Changes: added a light-blue circular background; recolored the globe blue; resized and converted to PNG and multi-size ICO.
+Files: /favicon.svg, /favicon.png, /favicon.ico
+Source: VideoMemBench project icon, restored from commit 7f31f31.
+Design: a single white video frame and purple play triangle on a purple (#7160eb) rounded square.
+PNG and multi-size ICO are raster exports of favicon.svg.
