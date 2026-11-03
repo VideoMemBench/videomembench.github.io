@@ -72,7 +72,7 @@
   <script src="memory-motion.js?v=20261020-2" defer></script>
   <script src="frame-results.js?v=20261020-1" defer></script>
 </head>
-<body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="wordmark" href="#">VideoMemBench</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#results">Results</a><a href="#evaluation">Evaluation</a><a href="#citation">Citation</a><a class="nav-code" href="https://github.com/Oliiveralien/VideoMemBench">GitHub ↗</a></nav></header>
+<body><a class="skip" href="#main">Skip to content</a><header class="nav"><a class="wordmark" href="#">VideoMemBench</a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#results">Results</a><a href="#citation">Citation</a><a class="nav-code" href="https://github.com/Oliiveralien/VideoMemBench">GitHub ↗</a></nav></header>
 <main id="main"><section class="hero" aria-labelledby="project-title">
       <div class="hero-stage" data-paused="true">
         <div class="frame-wall" id="frame-wall" aria-hidden="true">
@@ -342,53 +342,7 @@
   <p class="sr-only" id="frame-results-status" role="status"></p>
 </section>
 </div></section>
-<section class="wrap section" id="evaluation">
-  <div class="section-heading">
-    <p class="eyebrow">03 / EVALUATION</p>
-    <h2>The same video. The model’s own history.</h2>
-    <p>Visual input stays fixed; the conversation unfolds one turn at a time.</p>
-  </div>
-  <div class="evaluation-definitions">
-    <details class="definition-item" id="evaluation-protocol">
-      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>Evaluation protocol</strong><span class="definition-subtitle">Fixed input, sequential conversation, answer grading</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
-      <div class="definition-content">
-        <img class="protocol-figure" src="assets/evaluation-flow.svg" width="1440" alt="Evaluation pipeline: fixed visual input, sequential self-rollout, answer grading, dependency-aware metrics" loading="lazy">
-        <ol class="protocol-steps">
-          <li><h3>Fix the visual input</h3><p>Uniformly sample 128 timestamped frames once per video. Reuse the same frames for every model and every turn.</p></li>
-          <li><h3>Roll out the dialogue</h3><p>Ask questions in order, retaining the model’s own full historical responses. Ground-truth answers are not inserted into history.</p></li>
-          <li><h3>Grade each response</h3><p>Extract option letters for multiple-choice questions. Grade open-ended answers with GPT-5.4 mini under the paper’s binary semantic criterion.</p></li>
-        </ol>
-      </div>
-    </details>
-    <details class="definition-item" id="definition-turnacc">
-      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>TurnAcc</strong><span class="definition-subtitle">Turn accuracy</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
-      <div class="definition-content">
-        <dl class="metric-definition"><div><dt>Evaluation subset</dt><dd>All conversation turns.</dd></div><div><dt>Credit rule</dt><dd>A turn receives credit when the current response is correct.</dd></div></dl>
-      </div>
-    </details>
-    <details class="definition-item" id="definition-epidepacc">
-      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>EpiDepAcc</strong><span class="definition-subtitle">Episodic dependency accuracy</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
-      <div class="definition-content">
-        <dl class="metric-definition"><div><dt>Evaluation subset</dt><dd>Turns with at least one Episodic parent.</dd></div><div><dt>Credit rule</dt><dd>The current response must be correct. Credit is independent of whether the parent responses were correct.</dd></div></dl>
-      </div>
-    </details>
-    <details class="definition-item" id="definition-ansdepacc">
-      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>AnsDepAcc</strong><span class="definition-subtitle">Answer dependency accuracy</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
-      <div class="definition-content">
-        <dl class="metric-definition"><div><dt>Evaluation subset</dt><dd>Turns with at least one Answer parent.</dd></div><div><dt>Credit rule</dt><dd>The current response and every recursive ancestor reached through <strong>Answer edges only</strong> must all be correct. Episodic edges are not followed when tracing these ancestors.</dd></div></dl>
-      </div>
-    </details>
-    <details class="definition-item" id="definition-overall">
-      <summary><span class="definition-info" aria-hidden="true">i</span><span class="definition-title"><strong>Overall</strong><span class="definition-subtitle">Equal-weight mean of the three metrics</span></span><span class="definition-toggle" aria-hidden="true"></span></summary>
-      <div class="definition-content">
-        <p class="metric-formula">(TurnAcc + EpiDepAcc + AnsDepAcc) / 3</p>
-        <p>The three metrics contribute equally to the overall score. All scores are reported as percentages; higher is better.</p>
-      </div>
-    </details>
-  </div>
-  <div class="evaluation-link"><div><h3>Run the evaluation</h3><p>Frame preparation, self-rollout, answer grading, and dependency-aware scoring.</p></div><a class="button primary" href="https://github.com/Oliiveralien/VideoMemBench#evaluation">Evaluation guide ↗</a></div>
-</section>
-<section class="citation-section" id="citation"><div class="wrap section"><div class="section-heading"><p class="eyebrow">04 / CITATION</p><h2>Cite VideoMemBench</h2></div><div class="citation-box"><div class="code-heading"><span>BibTeX</span><button id="copy-citation">Copy citation</button></div><pre><code id="bibtex">@misc{videomembench,
+<section class="citation-section" id="citation"><div class="wrap section"><div class="section-heading"><p class="eyebrow">03 / CITATION</p><h2>Cite VideoMemBench</h2></div><div class="citation-box"><div class="code-heading"><span>BibTeX</span><button id="copy-citation">Copy citation</button></div><pre><code id="bibtex">@misc{videomembench,
       title={VideoMemBench: How Well Do MLLMs Remember in Video Conversations?}, 
       author={Zhengdong Hu and Chao Wang and Kaituo Feng and Huanjin Yao and Mingfei Lu and Hehe Fan and Yi Yang},
       year={2026},
